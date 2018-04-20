@@ -1,0 +1,4 @@
+﻿  triangle.cpp
+c:\users\alix\documents\github\imdcgp206-emerging-tech\emergingtechnologies\vulkan\triangle.cpp(104): error C2143: syntax error: missing ';' before '*'
+c:\users\alix\documents\github\imdcgp206-emerging-tech\emergingtechnologies\vulkan\triangle.cpp(104): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\alix\documents\github\imdcgp206-emerging-tech\emergingtechnologies\vulkan\triangle.cpp(104): error C2238: unexpected token(s) preceding ';'
