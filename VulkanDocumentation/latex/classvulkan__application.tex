@@ -1,0 +1,894 @@
+\hypertarget{classvulkan__application}{}\section{vulkan\+\_\+application Class Reference}
+\label{classvulkan__application}\index{vulkan\+\_\+application@{vulkan\+\_\+application}}
+
+
+The main application class.  
+
+
+
+
+{\ttfamily \#include $<$vulkan\+\_\+application.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classvulkan__application_a3f7182376c00ba7af1faa6a04bf2fb47}{run}} ()
+\begin{DoxyCompactList}\small\item\em The method to be called to run the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classvulkan__application_a6da121f1ee6104c981725c7c848c53a2}{init\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the window using the S\+DL library. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a0b5da10a731df21511bee740e7222d83}{init\+\_\+vulkan}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the various Vulkan elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a718898ea3675d58ea94fb4e70df49d15}{main\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop of the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a0ae5cac286b8379d17b3451dc7370790}{cleanup\+\_\+swap\+\_\+chain}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the various vulkan elements associated with the swap chain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a662efdabab9edb2e63cb86850352bfc8}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Called when the program is quitting, destroys all vulkan elements and exits S\+DL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a0190af17a510960b757dbcf037a70fa9}{recreate\+\_\+swap\+\_\+chain}} ()
+\begin{DoxyCompactList}\small\item\em Called on window resizing,. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a7eeae31c672464518ea0ba45ca39c00b}{create\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em Create a Vulkan Instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a53302651b78b29d293cf912542fa8438}{create\+\_\+surface}} ()
+\begin{DoxyCompactList}\small\item\em Obtain the Surface to render to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_ac2d9b18a54bf14c420522a4d5f9e7315}{pick\+\_\+physical\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Obtain the physical device we wish to use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a495dd01f2cac024f7ee25423eeaf2f84}{create\+\_\+logical\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Create a logical device from a physical device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a2a747a8bf6911b9aa0113220640e70ea}{create\+\_\+swap\+\_\+chain}} ()
+\begin{DoxyCompactList}\small\item\em Create the swap chain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a0b38ad71f195c9a939dc39ec873dfd21}{create\+\_\+image\+\_\+views}} ()
+\begin{DoxyCompactList}\small\item\em Create views for the associated images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_ade5cf429209c6ed274931cbae3a35824}{create\+\_\+render\+\_\+pass}} ()
+\begin{DoxyCompactList}\small\item\em Create a render pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a85db969a681ae5ee7e43080ade7b7769}{create\+\_\+descriptor\+\_\+set\+\_\+layout}} ()
+\begin{DoxyCompactList}\small\item\em Define the descriptor set layout, which is used to send the uniform buffer to the G\+PU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_ae22774f6ddd3272d9f03fc3d0c8b7b56}{create\+\_\+graphics\+\_\+pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Create a graphics pipeline which will be used to render. The graphics pipeline we will create will be similar to the pipeline in Open\+GL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a219950641fc50e873c559972448be53e}{create\+\_\+framebuffers}} ()
+\begin{DoxyCompactList}\small\item\em Obtain the framebuffers from the device, used for drawing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_aee34ac075ae6ec39a8a431f21b0633b0}{create\+\_\+command\+\_\+pool}} ()
+\begin{DoxyCompactList}\small\item\em Obtain the command pool, which will be used to contain commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_ae4a77b3ff9b979777b6a81470c7c60d2}{create\+\_\+vertex\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Create the vertex buffer, this is where the data of the vertices to draw will be held in the G\+PU memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a77a4cd2666406f254dc81d3131a47b22}{create\+\_\+index\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Create the index buffer, this is where the data of the indices to use when drawing will be held in the G\+PU memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a9be5f7de709b8b4d5521b9aad6c8dca8}{create\+\_\+uniform\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Create the uniform buffer, this is where the data will be held in G\+PU memory to be used by the vertex shader N\+O\+TE\+: a staging buffer is not used here because this will be constantly updated by the C\+PU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_ad7d34d19acdedb176ad2e1bb23ed6af4}{create\+\_\+descriptor\+\_\+pool}} ()
+\begin{DoxyCompactList}\small\item\em Create a descriptor pool, which will be used by the uniform buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_af2de0218b31f62a692241b26dfbeb8f6}{create\+\_\+descriptor\+\_\+set}} ()
+\begin{DoxyCompactList}\small\item\em Define the uniform buffer object descriptor set to send to the G\+PU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a85e6c1d77defccbf744383ce207cbd0a}{create\+\_\+buffer}} (const Vk\+Device\+Size size, const Vk\+Buffer\+Usage\+Flags usage, const Vk\+Memory\+Property\+Flags properties, Vk\+Buffer \&buffer, Vk\+Device\+Memory \&buffer\+\_\+memory) const
+\begin{DoxyCompactList}\small\item\em Create a buffer on the G\+PU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a41c0a64b0e78cb7e22700e35718e91f8}{copy\+\_\+buffer}} (const Vk\+Buffer src\+\_\+buffer, const Vk\+Buffer dst\+\_\+buffer, const Vk\+Device\+Size size) const
+\begin{DoxyCompactList}\small\item\em Copy from one G\+PU buffer to another. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classvulkan__application_ac5cbbeac91acbaad41d204567e6729ab}{find\+\_\+memory\+\_\+type}} (const uint32\+\_\+t type\+\_\+filter, const Vk\+Memory\+Property\+Flags properties) const
+\begin{DoxyCompactList}\small\item\em Obtain the memory type that the G\+PU supports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a2ec6eaab6fd5b8eaa95029eaad6537fe}{create\+\_\+command\+\_\+buffers}} ()
+\begin{DoxyCompactList}\small\item\em Create the command buffers which will then be used for submitting rendering commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a4060a7a236db93b53da6a51efd765f10}{create\+\_\+semaphores}} ()
+\begin{DoxyCompactList}\small\item\em Create synchronization semaphores, one will be used to signal when an image is available for rendering to the other will be used to signal when that rendering is finished. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_a6b685b0b52f3afd01b77f71325aa2ccb}{update\+\_\+uniform\+\_\+buffer}} () const
+\begin{DoxyCompactList}\small\item\em This is where the data is sent to the uniform buffer for use in the vertex shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvulkan__application_af2de4fec2329e96e5e0f020e6b4c3e02}{draw\+\_\+frame}} ()
+\begin{DoxyCompactList}\small\item\em Called on each update, to draw to the surface. \end{DoxyCompactList}\item 
+Vk\+Shader\+Module \mbox{\hyperlink{classvulkan__application_a20f3d58b5e0f58f4c8b3cf774da9f4da}{create\+\_\+shader\+\_\+module}} (const std\+::vector$<$ char $>$ \&code) const
+\begin{DoxyCompactList}\small\item\em Create a shader module from S\+P\+I\+R-\/V shader code. \end{DoxyCompactList}\item 
+Vk\+Extent2D \mbox{\hyperlink{classvulkan__application_a321b970cf84e0539418956dc32b2fe9d}{choose\+\_\+swap\+\_\+extent}} (const Vk\+Surface\+Capabilities\+K\+HR \&capabilities) const
+\begin{DoxyCompactList}\small\item\em Obtain the size of the window for use in the swapchain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structswap__chain__support__details}{swap\+\_\+chain\+\_\+support\+\_\+details}} \mbox{\hyperlink{classvulkan__application_a3f801985d5df0d3e377e5356980f5fa2}{query\+\_\+swap\+\_\+chain\+\_\+support}} (const Vk\+Physical\+Device device) const
+\begin{DoxyCompactList}\small\item\em Obtain various data about the device for use when creating a swapchain. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classvulkan__application_ae329db3c0937c649fa95b64250372a43}{is\+\_\+device\+\_\+suitable}} (const Vk\+Physical\+Device device) const
+\begin{DoxyCompactList}\small\item\em Check if the device is suitable for use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structqueue__family__indices}{queue\+\_\+family\+\_\+indices}} \mbox{\hyperlink{classvulkan__application_abbba891d35788327d9fa1b28c90fbd0e}{find\+\_\+queue\+\_\+families}} (const Vk\+Physical\+Device device) const
+\begin{DoxyCompactList}\small\item\em Find the graphics queue and present queue id\textquotesingle{}s for the device. \end{DoxyCompactList}\item 
+std\+::vector$<$ const char $\ast$ $>$ \mbox{\hyperlink{classvulkan__application_ac11d2776b4aceb5c69b397bd474c5955}{get\+\_\+required\+\_\+extensions}} () const
+\begin{DoxyCompactList}\small\item\em Get the device extensions that are required by S\+DL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Vk\+Surface\+Format\+K\+HR \mbox{\hyperlink{classvulkan__application_ae3a147ea9e78ef40044f715debd47f9d}{choose\+\_\+swap\+\_\+surface\+\_\+format}} (const std\+::vector$<$ Vk\+Surface\+Format\+K\+HR $>$ \&available\+\_\+formats)
+\begin{DoxyCompactList}\small\item\em Obtain the best surface format for the swapchain. \end{DoxyCompactList}\item 
+static Vk\+Present\+Mode\+K\+HR \mbox{\hyperlink{classvulkan__application_ae5d3e32c1119dcf663b76b00f49292a9}{choose\+\_\+swap\+\_\+present\+\_\+mode}} (const std\+::vector$<$ Vk\+Present\+Mode\+K\+HR $>$ available\+\_\+present\+\_\+modes)
+\begin{DoxyCompactList}\small\item\em Obtain the best present mode for the swapchain. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classvulkan__application_a00607f561b3ff3cf7ec587dd0f539731}{check\+\_\+device\+\_\+extension\+\_\+support}} (const Vk\+Physical\+Device device)
+\begin{DoxyCompactList}\small\item\em Check if the devie supports the extensions we need. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classvulkan__application_ab0ebd85ecb91dbfa14def023e17ed09e}{check\+\_\+validation\+\_\+layer\+\_\+support}} ()
+\begin{DoxyCompactList}\small\item\em Check that our requested validation layers are supported by the device. \end{DoxyCompactList}\item 
+static std\+::vector$<$ char $>$ \mbox{\hyperlink{classvulkan__application_ac0e61a90deaf38512932e9f59c2ab9ca}{read\+\_\+file}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Helper function to read a file from disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{classvulkan__application_a54a50845f409d0973e2f52f65a9cec1d}{sdl\+\_\+window\+\_\+}}
+\item 
+Vk\+Instance \mbox{\hyperlink{classvulkan__application_adaadd43d3b44441517543a3dab918cbb}{vulkan\+\_\+instance\+\_\+}}
+\item 
+Vk\+Debug\+Report\+Callback\+E\+XT \mbox{\hyperlink{classvulkan__application_a1906465a4a664a8be6d6df38340eeafc}{debug\+\_\+callback\+\_\+}}
+\item 
+Vk\+Surface\+K\+HR \mbox{\hyperlink{classvulkan__application_a2492ee7a49aab081e5ab348981bece0e}{vulkan\+\_\+surface\+\_\+}}
+\item 
+Vk\+Physical\+Device \mbox{\hyperlink{classvulkan__application_ae3478ed1667c4e9e3728d5c0b90cc18b}{physical\+\_\+device\+\_\+}} = nullptr
+\item 
+Vk\+Device \mbox{\hyperlink{classvulkan__application_a1f890b4eb7b99da38b17c7fa938846d7}{logical\+\_\+device\+\_\+}}
+\item 
+Vk\+Queue \mbox{\hyperlink{classvulkan__application_a6d9dfc3ea9dd3ab636a8732a531dd50e}{graphics\+\_\+queue\+\_\+}}
+\item 
+Vk\+Queue \mbox{\hyperlink{classvulkan__application_a0ea345da04dec8dfa152119f18a9d83f}{present\+\_\+queue\+\_\+}}
+\item 
+Vk\+Swapchain\+K\+HR \mbox{\hyperlink{classvulkan__application_a371a0f23b472dd5b864ab7f6216a62f9}{swap\+\_\+chain\+\_\+}}
+\item 
+std\+::vector$<$ Vk\+Image $>$ \mbox{\hyperlink{classvulkan__application_a807f02a6ea2ac40920ade18d8bb7f014}{swap\+\_\+chain\+\_\+images\+\_\+}}
+\item 
+Vk\+Format \mbox{\hyperlink{classvulkan__application_a3d95f5900aecca3ee3a3d1b4ae217090}{swap\+\_\+chain\+\_\+image\+\_\+format\+\_\+}}
+\item 
+Vk\+Extent2D \mbox{\hyperlink{classvulkan__application_a2546d682f51a41d69810f1a6f1668aa6}{swap\+\_\+chain\+\_\+extent\+\_\+}}
+\item 
+std\+::vector$<$ Vk\+Image\+View $>$ \mbox{\hyperlink{classvulkan__application_ab2055e66f040916c7629ca379b159f95}{swap\+\_\+chain\+\_\+image\+\_\+views\+\_\+}}
+\item 
+std\+::vector$<$ Vk\+Framebuffer $>$ \mbox{\hyperlink{classvulkan__application_a16194c6e60f79f3e455afd39d8ee01f6}{swap\+\_\+chain\+\_\+framebuffers\+\_\+}}
+\item 
+Vk\+Render\+Pass \mbox{\hyperlink{classvulkan__application_a1886de8ac493fca76ca2cf91b29795e6}{render\+\_\+pass\+\_\+}}
+\item 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{classvulkan__application_a661247bb5ae08dabadccc2f03644e45b}{descriptor\+\_\+set\+\_\+layout\+\_\+}}
+\item 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{classvulkan__application_a1c0aeeab90c543c4ad36ca9613053412}{pipeline\+\_\+layout\+\_\+}}
+\item 
+Vk\+Pipeline \mbox{\hyperlink{classvulkan__application_a4709e265b16ee01a6e53bf4e4c0055be}{graphics\+\_\+pipeline\+\_\+}}
+\item 
+Vk\+Command\+Pool \mbox{\hyperlink{classvulkan__application_a15f632f231a251df6e3b986cd7356e6d}{command\+\_\+pool\+\_\+}}
+\item 
+std\+::vector$<$ Vk\+Command\+Buffer $>$ \mbox{\hyperlink{classvulkan__application_afc31f050714033fdb91f9effd074fbd7}{command\+\_\+buffers\+\_\+}}
+\item 
+Vk\+Buffer \mbox{\hyperlink{classvulkan__application_ab4dbb1dfeff5f1808f0453b21caee32a}{vertex\+\_\+buffer\+\_\+}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{classvulkan__application_ac3d1ae7db9706875a138f3da07c5e78c}{vertex\+\_\+buffer\+\_\+memory\+\_\+}}
+\item 
+Vk\+Buffer \mbox{\hyperlink{classvulkan__application_a8aee36b907c294735195b3e609c995cf}{index\+\_\+buffer\+\_\+}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{classvulkan__application_a75c49696265e13861e7867385fa454e9}{index\+\_\+buffer\+\_\+memory\+\_\+}}
+\item 
+Vk\+Buffer \mbox{\hyperlink{classvulkan__application_a4482a98825a11fdb7775c7bf1d7cec04}{uniform\+\_\+buffer\+\_\+}}
+\item 
+Vk\+Device\+Memory \mbox{\hyperlink{classvulkan__application_a2c85c8c670b5929b16385ca2f6ea8f00}{uniform\+\_\+buffer\+\_\+memory\+\_\+}}
+\item 
+Vk\+Descriptor\+Pool \mbox{\hyperlink{classvulkan__application_a1d2b6667e0b895b94ce0d7a366403dbb}{descriptor\+\_\+pool\+\_\+}}
+\item 
+Vk\+Descriptor\+Set \mbox{\hyperlink{classvulkan__application_a03a9021076eedbae009b89ef4f7ce795}{descriptor\+\_\+set\+\_\+}}
+\item 
+Vk\+Semaphore \mbox{\hyperlink{classvulkan__application_ac0a94cf75ca2f81b95f90628298d9287}{image\+\_\+available\+\_\+semaphore\+\_\+}}
+\item 
+Vk\+Semaphore \mbox{\hyperlink{classvulkan__application_a44c5124568762f2c900ac144b8770356}{render\+\_\+finished\+\_\+semaphore\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main application class. 
+
+Provide an example of how to use Vulkan.
+
+This is a detailed example of how you can draw a rotating object using the Vulkan A\+PI. This example uses staging buffers to upload data to the G\+PU, supports uniform buffers and is heavily commented. It can be used as a base for a vulkan application. This example has only been tested on Windows, however should work on Linux with minor changes. The S\+D\+L2 library is used for window and surface creation.
+
+\begin{DoxyAuthor}{Author}
+Alixander Roden The University Of Suffolk Ipswich, United Kingdom
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018/04/30 05\+:01\+:00
+\end{DoxyDate}
+Contact\+: \href{mailto:S190762@uos.ac.uk}{\tt S190762@uos.\+ac.\+uk}
+
+Last Updated on\+: 30th April 2018 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classvulkan__application_a00607f561b3ff3cf7ec587dd0f539731}\label{classvulkan__application_a00607f561b3ff3cf7ec587dd0f539731}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!check\+\_\+device\+\_\+extension\+\_\+support@{check\+\_\+device\+\_\+extension\+\_\+support}}
+\index{check\+\_\+device\+\_\+extension\+\_\+support@{check\+\_\+device\+\_\+extension\+\_\+support}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{check\+\_\+device\+\_\+extension\+\_\+support()}{check\_device\_extension\_support()}}
+{\footnotesize\ttfamily bool vulkan\+\_\+application\+::check\+\_\+device\+\_\+extension\+\_\+support (\begin{DoxyParamCaption}\item[{const Vk\+Physical\+Device}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Check if the devie supports the extensions we need. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & the device to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_ab0ebd85ecb91dbfa14def023e17ed09e}\label{classvulkan__application_ab0ebd85ecb91dbfa14def023e17ed09e}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!check\+\_\+validation\+\_\+layer\+\_\+support@{check\+\_\+validation\+\_\+layer\+\_\+support}}
+\index{check\+\_\+validation\+\_\+layer\+\_\+support@{check\+\_\+validation\+\_\+layer\+\_\+support}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{check\+\_\+validation\+\_\+layer\+\_\+support()}{check\_validation\_layer\_support()}}
+{\footnotesize\ttfamily bool vulkan\+\_\+application\+::check\+\_\+validation\+\_\+layer\+\_\+support (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Check that our requested validation layers are supported by the device. 
+
+\begin{DoxyReturn}{Returns}
+true/false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_a321b970cf84e0539418956dc32b2fe9d}\label{classvulkan__application_a321b970cf84e0539418956dc32b2fe9d}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!choose\+\_\+swap\+\_\+extent@{choose\+\_\+swap\+\_\+extent}}
+\index{choose\+\_\+swap\+\_\+extent@{choose\+\_\+swap\+\_\+extent}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{choose\+\_\+swap\+\_\+extent()}{choose\_swap\_extent()}}
+{\footnotesize\ttfamily Vk\+Extent2D vulkan\+\_\+application\+::choose\+\_\+swap\+\_\+extent (\begin{DoxyParamCaption}\item[{const Vk\+Surface\+Capabilities\+K\+HR \&}]{capabilities }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain the size of the window for use in the swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capabilities} & a list of surface capabilites \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the swapchain extent (window width and height) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_ae5d3e32c1119dcf663b76b00f49292a9}\label{classvulkan__application_ae5d3e32c1119dcf663b76b00f49292a9}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!choose\+\_\+swap\+\_\+present\+\_\+mode@{choose\+\_\+swap\+\_\+present\+\_\+mode}}
+\index{choose\+\_\+swap\+\_\+present\+\_\+mode@{choose\+\_\+swap\+\_\+present\+\_\+mode}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{choose\+\_\+swap\+\_\+present\+\_\+mode()}{choose\_swap\_present\_mode()}}
+{\footnotesize\ttfamily Vk\+Present\+Mode\+K\+HR vulkan\+\_\+application\+::choose\+\_\+swap\+\_\+present\+\_\+mode (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Vk\+Present\+Mode\+K\+HR $>$}]{available\+\_\+present\+\_\+modes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Obtain the best present mode for the swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em available\+\_\+present\+\_\+modes} & a list of present modes the surface supports \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the best present mode to use 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_ae3a147ea9e78ef40044f715debd47f9d}\label{classvulkan__application_ae3a147ea9e78ef40044f715debd47f9d}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!choose\+\_\+swap\+\_\+surface\+\_\+format@{choose\+\_\+swap\+\_\+surface\+\_\+format}}
+\index{choose\+\_\+swap\+\_\+surface\+\_\+format@{choose\+\_\+swap\+\_\+surface\+\_\+format}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{choose\+\_\+swap\+\_\+surface\+\_\+format()}{choose\_swap\_surface\_format()}}
+{\footnotesize\ttfamily Vk\+Surface\+Format\+K\+HR vulkan\+\_\+application\+::choose\+\_\+swap\+\_\+surface\+\_\+format (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Vk\+Surface\+Format\+K\+HR $>$ \&}]{available\+\_\+formats }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Obtain the best surface format for the swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em available\+\_\+formats} & a list of formats the surface supports \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the best surface format to use 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_a662efdabab9edb2e63cb86850352bfc8}\label{classvulkan__application_a662efdabab9edb2e63cb86850352bfc8}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called when the program is quitting, destroys all vulkan elements and exits S\+DL. 
+
+\mbox{\Hypertarget{classvulkan__application_a0ae5cac286b8379d17b3451dc7370790}\label{classvulkan__application_a0ae5cac286b8379d17b3451dc7370790}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!cleanup\+\_\+swap\+\_\+chain@{cleanup\+\_\+swap\+\_\+chain}}
+\index{cleanup\+\_\+swap\+\_\+chain@{cleanup\+\_\+swap\+\_\+chain}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+swap\+\_\+chain()}{cleanup\_swap\_chain()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::cleanup\+\_\+swap\+\_\+chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Destroy the various vulkan elements associated with the swap chain. 
+
+\mbox{\Hypertarget{classvulkan__application_a41c0a64b0e78cb7e22700e35718e91f8}\label{classvulkan__application_a41c0a64b0e78cb7e22700e35718e91f8}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!copy\+\_\+buffer@{copy\+\_\+buffer}}
+\index{copy\+\_\+buffer@{copy\+\_\+buffer}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{copy\+\_\+buffer()}{copy\_buffer()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::copy\+\_\+buffer (\begin{DoxyParamCaption}\item[{const Vk\+Buffer}]{src\+\_\+buffer,  }\item[{const Vk\+Buffer}]{dst\+\_\+buffer,  }\item[{const Vk\+Device\+Size}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Copy from one G\+PU buffer to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+\_\+buffer} & the buffer to copy from \\
+\hline
+{\em dst\+\_\+buffer} & the buffer to copy to \\
+\hline
+{\em size} & the size of the buffer data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvulkan__application_a85e6c1d77defccbf744383ce207cbd0a}\label{classvulkan__application_a85e6c1d77defccbf744383ce207cbd0a}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+buffer@{create\+\_\+buffer}}
+\index{create\+\_\+buffer@{create\+\_\+buffer}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+buffer()}{create\_buffer()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+buffer (\begin{DoxyParamCaption}\item[{const Vk\+Device\+Size}]{size,  }\item[{const Vk\+Buffer\+Usage\+Flags}]{usage,  }\item[{const Vk\+Memory\+Property\+Flags}]{properties,  }\item[{Vk\+Buffer \&}]{buffer,  }\item[{Vk\+Device\+Memory \&}]{buffer\+\_\+memory }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a buffer on the G\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the buffer data \\
+\hline
+{\em usage} & the usage of the buffer \\
+\hline
+{\em properties} & the memroy properties \\
+\hline
+{\em buffer} & the buffer \\
+\hline
+{\em buffer\+\_\+memory} & the buffer\textquotesingle{}s memory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvulkan__application_a2ec6eaab6fd5b8eaa95029eaad6537fe}\label{classvulkan__application_a2ec6eaab6fd5b8eaa95029eaad6537fe}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+command\+\_\+buffers@{create\+\_\+command\+\_\+buffers}}
+\index{create\+\_\+command\+\_\+buffers@{create\+\_\+command\+\_\+buffers}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+command\+\_\+buffers()}{create\_command\_buffers()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+command\+\_\+buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the command buffers which will then be used for submitting rendering commands. 
+
+\mbox{\Hypertarget{classvulkan__application_aee34ac075ae6ec39a8a431f21b0633b0}\label{classvulkan__application_aee34ac075ae6ec39a8a431f21b0633b0}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+command\+\_\+pool@{create\+\_\+command\+\_\+pool}}
+\index{create\+\_\+command\+\_\+pool@{create\+\_\+command\+\_\+pool}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+command\+\_\+pool()}{create\_command\_pool()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+command\+\_\+pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain the command pool, which will be used to contain commands. 
+
+\mbox{\Hypertarget{classvulkan__application_ad7d34d19acdedb176ad2e1bb23ed6af4}\label{classvulkan__application_ad7d34d19acdedb176ad2e1bb23ed6af4}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+descriptor\+\_\+pool@{create\+\_\+descriptor\+\_\+pool}}
+\index{create\+\_\+descriptor\+\_\+pool@{create\+\_\+descriptor\+\_\+pool}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+descriptor\+\_\+pool()}{create\_descriptor\_pool()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+descriptor\+\_\+pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a descriptor pool, which will be used by the uniform buffer. 
+
+\mbox{\Hypertarget{classvulkan__application_af2de0218b31f62a692241b26dfbeb8f6}\label{classvulkan__application_af2de0218b31f62a692241b26dfbeb8f6}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+descriptor\+\_\+set@{create\+\_\+descriptor\+\_\+set}}
+\index{create\+\_\+descriptor\+\_\+set@{create\+\_\+descriptor\+\_\+set}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+descriptor\+\_\+set()}{create\_descriptor\_set()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+descriptor\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Define the uniform buffer object descriptor set to send to the G\+PU. 
+
+\mbox{\Hypertarget{classvulkan__application_a85db969a681ae5ee7e43080ade7b7769}\label{classvulkan__application_a85db969a681ae5ee7e43080ade7b7769}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+descriptor\+\_\+set\+\_\+layout@{create\+\_\+descriptor\+\_\+set\+\_\+layout}}
+\index{create\+\_\+descriptor\+\_\+set\+\_\+layout@{create\+\_\+descriptor\+\_\+set\+\_\+layout}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+descriptor\+\_\+set\+\_\+layout()}{create\_descriptor\_set\_layout()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+descriptor\+\_\+set\+\_\+layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Define the descriptor set layout, which is used to send the uniform buffer to the G\+PU. 
+
+\mbox{\Hypertarget{classvulkan__application_a219950641fc50e873c559972448be53e}\label{classvulkan__application_a219950641fc50e873c559972448be53e}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+framebuffers@{create\+\_\+framebuffers}}
+\index{create\+\_\+framebuffers@{create\+\_\+framebuffers}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+framebuffers()}{create\_framebuffers()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+framebuffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain the framebuffers from the device, used for drawing. 
+
+\mbox{\Hypertarget{classvulkan__application_ae22774f6ddd3272d9f03fc3d0c8b7b56}\label{classvulkan__application_ae22774f6ddd3272d9f03fc3d0c8b7b56}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+graphics\+\_\+pipeline@{create\+\_\+graphics\+\_\+pipeline}}
+\index{create\+\_\+graphics\+\_\+pipeline@{create\+\_\+graphics\+\_\+pipeline}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+graphics\+\_\+pipeline()}{create\_graphics\_pipeline()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+graphics\+\_\+pipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a graphics pipeline which will be used to render. The graphics pipeline we will create will be similar to the pipeline in Open\+GL. 
+
+\mbox{\Hypertarget{classvulkan__application_a0b38ad71f195c9a939dc39ec873dfd21}\label{classvulkan__application_a0b38ad71f195c9a939dc39ec873dfd21}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+image\+\_\+views@{create\+\_\+image\+\_\+views}}
+\index{create\+\_\+image\+\_\+views@{create\+\_\+image\+\_\+views}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+image\+\_\+views()}{create\_image\_views()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+image\+\_\+views (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create views for the associated images. 
+
+\mbox{\Hypertarget{classvulkan__application_a77a4cd2666406f254dc81d3131a47b22}\label{classvulkan__application_a77a4cd2666406f254dc81d3131a47b22}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+index\+\_\+buffer@{create\+\_\+index\+\_\+buffer}}
+\index{create\+\_\+index\+\_\+buffer@{create\+\_\+index\+\_\+buffer}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+index\+\_\+buffer()}{create\_index\_buffer()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+index\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the index buffer, this is where the data of the indices to use when drawing will be held in the G\+PU memory. 
+
+\mbox{\Hypertarget{classvulkan__application_a7eeae31c672464518ea0ba45ca39c00b}\label{classvulkan__application_a7eeae31c672464518ea0ba45ca39c00b}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+instance@{create\+\_\+instance}}
+\index{create\+\_\+instance@{create\+\_\+instance}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+instance()}{create\_instance()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a Vulkan Instance. 
+
+\mbox{\Hypertarget{classvulkan__application_a495dd01f2cac024f7ee25423eeaf2f84}\label{classvulkan__application_a495dd01f2cac024f7ee25423eeaf2f84}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+logical\+\_\+device@{create\+\_\+logical\+\_\+device}}
+\index{create\+\_\+logical\+\_\+device@{create\+\_\+logical\+\_\+device}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+logical\+\_\+device()}{create\_logical\_device()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+logical\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a logical device from a physical device. 
+
+\mbox{\Hypertarget{classvulkan__application_ade5cf429209c6ed274931cbae3a35824}\label{classvulkan__application_ade5cf429209c6ed274931cbae3a35824}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+render\+\_\+pass@{create\+\_\+render\+\_\+pass}}
+\index{create\+\_\+render\+\_\+pass@{create\+\_\+render\+\_\+pass}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+render\+\_\+pass()}{create\_render\_pass()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+render\+\_\+pass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a render pass. 
+
+\mbox{\Hypertarget{classvulkan__application_a4060a7a236db93b53da6a51efd765f10}\label{classvulkan__application_a4060a7a236db93b53da6a51efd765f10}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+semaphores@{create\+\_\+semaphores}}
+\index{create\+\_\+semaphores@{create\+\_\+semaphores}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+semaphores()}{create\_semaphores()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+semaphores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create synchronization semaphores, one will be used to signal when an image is available for rendering to the other will be used to signal when that rendering is finished. 
+
+\mbox{\Hypertarget{classvulkan__application_a20f3d58b5e0f58f4c8b3cf774da9f4da}\label{classvulkan__application_a20f3d58b5e0f58f4c8b3cf774da9f4da}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+shader\+\_\+module@{create\+\_\+shader\+\_\+module}}
+\index{create\+\_\+shader\+\_\+module@{create\+\_\+shader\+\_\+module}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+shader\+\_\+module()}{create\_shader\_module()}}
+{\footnotesize\ttfamily Vk\+Shader\+Module vulkan\+\_\+application\+::create\+\_\+shader\+\_\+module (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a shader module from S\+P\+I\+R-\/V shader code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & the data of the shader \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shader module 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_a53302651b78b29d293cf912542fa8438}\label{classvulkan__application_a53302651b78b29d293cf912542fa8438}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+surface@{create\+\_\+surface}}
+\index{create\+\_\+surface@{create\+\_\+surface}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+surface()}{create\_surface()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain the Surface to render to. 
+
+\mbox{\Hypertarget{classvulkan__application_a2a747a8bf6911b9aa0113220640e70ea}\label{classvulkan__application_a2a747a8bf6911b9aa0113220640e70ea}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+swap\+\_\+chain@{create\+\_\+swap\+\_\+chain}}
+\index{create\+\_\+swap\+\_\+chain@{create\+\_\+swap\+\_\+chain}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+swap\+\_\+chain()}{create\_swap\_chain()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+swap\+\_\+chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the swap chain. 
+
+\mbox{\Hypertarget{classvulkan__application_a9be5f7de709b8b4d5521b9aad6c8dca8}\label{classvulkan__application_a9be5f7de709b8b4d5521b9aad6c8dca8}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+uniform\+\_\+buffer@{create\+\_\+uniform\+\_\+buffer}}
+\index{create\+\_\+uniform\+\_\+buffer@{create\+\_\+uniform\+\_\+buffer}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+uniform\+\_\+buffer()}{create\_uniform\_buffer()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+uniform\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the uniform buffer, this is where the data will be held in G\+PU memory to be used by the vertex shader N\+O\+TE\+: a staging buffer is not used here because this will be constantly updated by the C\+PU. 
+
+\mbox{\Hypertarget{classvulkan__application_ae4a77b3ff9b979777b6a81470c7c60d2}\label{classvulkan__application_ae4a77b3ff9b979777b6a81470c7c60d2}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!create\+\_\+vertex\+\_\+buffer@{create\+\_\+vertex\+\_\+buffer}}
+\index{create\+\_\+vertex\+\_\+buffer@{create\+\_\+vertex\+\_\+buffer}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{create\+\_\+vertex\+\_\+buffer()}{create\_vertex\_buffer()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::create\+\_\+vertex\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the vertex buffer, this is where the data of the vertices to draw will be held in the G\+PU memory. 
+
+\mbox{\Hypertarget{classvulkan__application_af2de4fec2329e96e5e0f020e6b4c3e02}\label{classvulkan__application_af2de4fec2329e96e5e0f020e6b4c3e02}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!draw\+\_\+frame@{draw\+\_\+frame}}
+\index{draw\+\_\+frame@{draw\+\_\+frame}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{draw\+\_\+frame()}{draw\_frame()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::draw\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called on each update, to draw to the surface. 
+
+\mbox{\Hypertarget{classvulkan__application_ac5cbbeac91acbaad41d204567e6729ab}\label{classvulkan__application_ac5cbbeac91acbaad41d204567e6729ab}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!find\+\_\+memory\+\_\+type@{find\+\_\+memory\+\_\+type}}
+\index{find\+\_\+memory\+\_\+type@{find\+\_\+memory\+\_\+type}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{find\+\_\+memory\+\_\+type()}{find\_memory\_type()}}
+{\footnotesize\ttfamily uint32\+\_\+t vulkan\+\_\+application\+::find\+\_\+memory\+\_\+type (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{type\+\_\+filter,  }\item[{const Vk\+Memory\+Property\+Flags}]{properties }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain the memory type that the G\+PU supports. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+\_\+filter} & what the memory type must support \\
+\hline
+{\em properties} & the memory property flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the memory type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_abbba891d35788327d9fa1b28c90fbd0e}\label{classvulkan__application_abbba891d35788327d9fa1b28c90fbd0e}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!find\+\_\+queue\+\_\+families@{find\+\_\+queue\+\_\+families}}
+\index{find\+\_\+queue\+\_\+families@{find\+\_\+queue\+\_\+families}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{find\+\_\+queue\+\_\+families()}{find\_queue\_families()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqueue__family__indices}{queue\+\_\+family\+\_\+indices}} vulkan\+\_\+application\+::find\+\_\+queue\+\_\+families (\begin{DoxyParamCaption}\item[{const Vk\+Physical\+Device}]{device }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Find the graphics queue and present queue id\textquotesingle{}s for the device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & the device to search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a structure containg the queue id\textquotesingle{}s 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_ac11d2776b4aceb5c69b397bd474c5955}\label{classvulkan__application_ac11d2776b4aceb5c69b397bd474c5955}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!get\+\_\+required\+\_\+extensions@{get\+\_\+required\+\_\+extensions}}
+\index{get\+\_\+required\+\_\+extensions@{get\+\_\+required\+\_\+extensions}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{get\+\_\+required\+\_\+extensions()}{get\_required\_extensions()}}
+{\footnotesize\ttfamily std\+::vector$<$ const char $\ast$ $>$ vulkan\+\_\+application\+::get\+\_\+required\+\_\+extensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get the device extensions that are required by S\+DL. 
+
+\begin{DoxyReturn}{Returns}
+a list of the extensions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_a0b5da10a731df21511bee740e7222d83}\label{classvulkan__application_a0b5da10a731df21511bee740e7222d83}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!init\+\_\+vulkan@{init\+\_\+vulkan}}
+\index{init\+\_\+vulkan@{init\+\_\+vulkan}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{init\+\_\+vulkan()}{init\_vulkan()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::init\+\_\+vulkan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the various Vulkan elements. 
+
+\mbox{\Hypertarget{classvulkan__application_a6da121f1ee6104c981725c7c848c53a2}\label{classvulkan__application_a6da121f1ee6104c981725c7c848c53a2}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!init\+\_\+window@{init\+\_\+window}}
+\index{init\+\_\+window@{init\+\_\+window}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{init\+\_\+window()}{init\_window()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::init\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the window using the S\+DL library. 
+
+\mbox{\Hypertarget{classvulkan__application_ae329db3c0937c649fa95b64250372a43}\label{classvulkan__application_ae329db3c0937c649fa95b64250372a43}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!is\+\_\+device\+\_\+suitable@{is\+\_\+device\+\_\+suitable}}
+\index{is\+\_\+device\+\_\+suitable@{is\+\_\+device\+\_\+suitable}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{is\+\_\+device\+\_\+suitable()}{is\_device\_suitable()}}
+{\footnotesize\ttfamily bool vulkan\+\_\+application\+::is\+\_\+device\+\_\+suitable (\begin{DoxyParamCaption}\item[{const Vk\+Physical\+Device}]{device }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check if the device is suitable for use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & the device that we wish to check is suitable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the device is suitable, false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_a718898ea3675d58ea94fb4e70df49d15}\label{classvulkan__application_a718898ea3675d58ea94fb4e70df49d15}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!main\+\_\+loop@{main\+\_\+loop}}
+\index{main\+\_\+loop@{main\+\_\+loop}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{main\+\_\+loop()}{main\_loop()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::main\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The main loop of the application. 
+
+\mbox{\Hypertarget{classvulkan__application_ac2d9b18a54bf14c420522a4d5f9e7315}\label{classvulkan__application_ac2d9b18a54bf14c420522a4d5f9e7315}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!pick\+\_\+physical\+\_\+device@{pick\+\_\+physical\+\_\+device}}
+\index{pick\+\_\+physical\+\_\+device@{pick\+\_\+physical\+\_\+device}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{pick\+\_\+physical\+\_\+device()}{pick\_physical\_device()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::pick\+\_\+physical\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain the physical device we wish to use. 
+
+\mbox{\Hypertarget{classvulkan__application_a3f801985d5df0d3e377e5356980f5fa2}\label{classvulkan__application_a3f801985d5df0d3e377e5356980f5fa2}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!query\+\_\+swap\+\_\+chain\+\_\+support@{query\+\_\+swap\+\_\+chain\+\_\+support}}
+\index{query\+\_\+swap\+\_\+chain\+\_\+support@{query\+\_\+swap\+\_\+chain\+\_\+support}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{query\+\_\+swap\+\_\+chain\+\_\+support()}{query\_swap\_chain\_support()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structswap__chain__support__details}{swap\+\_\+chain\+\_\+support\+\_\+details}} vulkan\+\_\+application\+::query\+\_\+swap\+\_\+chain\+\_\+support (\begin{DoxyParamCaption}\item[{const Vk\+Physical\+Device}]{device }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obtain various data about the device for use when creating a swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & the device that we wish to use for the swap chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a struct containg data about the device\textquotesingle{}s swapchain capabilities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_ac0e61a90deaf38512932e9f59c2ab9ca}\label{classvulkan__application_ac0e61a90deaf38512932e9f59c2ab9ca}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily std\+::vector$<$ char $>$ vulkan\+\_\+application\+::read\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Helper function to read a file from disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a char vector containing the read data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvulkan__application_a0190af17a510960b757dbcf037a70fa9}\label{classvulkan__application_a0190af17a510960b757dbcf037a70fa9}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!recreate\+\_\+swap\+\_\+chain@{recreate\+\_\+swap\+\_\+chain}}
+\index{recreate\+\_\+swap\+\_\+chain@{recreate\+\_\+swap\+\_\+chain}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{recreate\+\_\+swap\+\_\+chain()}{recreate\_swap\_chain()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::recreate\+\_\+swap\+\_\+chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called on window resizing,. 
+
+\mbox{\Hypertarget{classvulkan__application_a3f7182376c00ba7af1faa6a04bf2fb47}\label{classvulkan__application_a3f7182376c00ba7af1faa6a04bf2fb47}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!run@{run}}
+\index{run@{run}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method to be called to run the application. 
+
+\mbox{\Hypertarget{classvulkan__application_a6b685b0b52f3afd01b77f71325aa2ccb}\label{classvulkan__application_a6b685b0b52f3afd01b77f71325aa2ccb}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!update\+\_\+uniform\+\_\+buffer@{update\+\_\+uniform\+\_\+buffer}}
+\index{update\+\_\+uniform\+\_\+buffer@{update\+\_\+uniform\+\_\+buffer}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{update\+\_\+uniform\+\_\+buffer()}{update\_uniform\_buffer()}}
+{\footnotesize\ttfamily void vulkan\+\_\+application\+::update\+\_\+uniform\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is where the data is sent to the uniform buffer for use in the vertex shader. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classvulkan__application_afc31f050714033fdb91f9effd074fbd7}\label{classvulkan__application_afc31f050714033fdb91f9effd074fbd7}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!command\+\_\+buffers\+\_\+@{command\+\_\+buffers\+\_\+}}
+\index{command\+\_\+buffers\+\_\+@{command\+\_\+buffers\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{command\+\_\+buffers\+\_\+}{command\_buffers\_}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Command\+Buffer$>$ vulkan\+\_\+application\+::command\+\_\+buffers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a15f632f231a251df6e3b986cd7356e6d}\label{classvulkan__application_a15f632f231a251df6e3b986cd7356e6d}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!command\+\_\+pool\+\_\+@{command\+\_\+pool\+\_\+}}
+\index{command\+\_\+pool\+\_\+@{command\+\_\+pool\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{command\+\_\+pool\+\_\+}{command\_pool\_}}
+{\footnotesize\ttfamily Vk\+Command\+Pool vulkan\+\_\+application\+::command\+\_\+pool\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a1906465a4a664a8be6d6df38340eeafc}\label{classvulkan__application_a1906465a4a664a8be6d6df38340eeafc}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!debug\+\_\+callback\+\_\+@{debug\+\_\+callback\+\_\+}}
+\index{debug\+\_\+callback\+\_\+@{debug\+\_\+callback\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{debug\+\_\+callback\+\_\+}{debug\_callback\_}}
+{\footnotesize\ttfamily Vk\+Debug\+Report\+Callback\+E\+XT vulkan\+\_\+application\+::debug\+\_\+callback\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a1d2b6667e0b895b94ce0d7a366403dbb}\label{classvulkan__application_a1d2b6667e0b895b94ce0d7a366403dbb}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!descriptor\+\_\+pool\+\_\+@{descriptor\+\_\+pool\+\_\+}}
+\index{descriptor\+\_\+pool\+\_\+@{descriptor\+\_\+pool\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{descriptor\+\_\+pool\+\_\+}{descriptor\_pool\_}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Pool vulkan\+\_\+application\+::descriptor\+\_\+pool\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a03a9021076eedbae009b89ef4f7ce795}\label{classvulkan__application_a03a9021076eedbae009b89ef4f7ce795}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!descriptor\+\_\+set\+\_\+@{descriptor\+\_\+set\+\_\+}}
+\index{descriptor\+\_\+set\+\_\+@{descriptor\+\_\+set\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{descriptor\+\_\+set\+\_\+}{descriptor\_set\_}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Set vulkan\+\_\+application\+::descriptor\+\_\+set\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a661247bb5ae08dabadccc2f03644e45b}\label{classvulkan__application_a661247bb5ae08dabadccc2f03644e45b}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!descriptor\+\_\+set\+\_\+layout\+\_\+@{descriptor\+\_\+set\+\_\+layout\+\_\+}}
+\index{descriptor\+\_\+set\+\_\+layout\+\_\+@{descriptor\+\_\+set\+\_\+layout\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{descriptor\+\_\+set\+\_\+layout\+\_\+}{descriptor\_set\_layout\_}}
+{\footnotesize\ttfamily Vk\+Descriptor\+Set\+Layout vulkan\+\_\+application\+::descriptor\+\_\+set\+\_\+layout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a4709e265b16ee01a6e53bf4e4c0055be}\label{classvulkan__application_a4709e265b16ee01a6e53bf4e4c0055be}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!graphics\+\_\+pipeline\+\_\+@{graphics\+\_\+pipeline\+\_\+}}
+\index{graphics\+\_\+pipeline\+\_\+@{graphics\+\_\+pipeline\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{graphics\+\_\+pipeline\+\_\+}{graphics\_pipeline\_}}
+{\footnotesize\ttfamily Vk\+Pipeline vulkan\+\_\+application\+::graphics\+\_\+pipeline\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a6d9dfc3ea9dd3ab636a8732a531dd50e}\label{classvulkan__application_a6d9dfc3ea9dd3ab636a8732a531dd50e}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!graphics\+\_\+queue\+\_\+@{graphics\+\_\+queue\+\_\+}}
+\index{graphics\+\_\+queue\+\_\+@{graphics\+\_\+queue\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{graphics\+\_\+queue\+\_\+}{graphics\_queue\_}}
+{\footnotesize\ttfamily Vk\+Queue vulkan\+\_\+application\+::graphics\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_ac0a94cf75ca2f81b95f90628298d9287}\label{classvulkan__application_ac0a94cf75ca2f81b95f90628298d9287}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!image\+\_\+available\+\_\+semaphore\+\_\+@{image\+\_\+available\+\_\+semaphore\+\_\+}}
+\index{image\+\_\+available\+\_\+semaphore\+\_\+@{image\+\_\+available\+\_\+semaphore\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{image\+\_\+available\+\_\+semaphore\+\_\+}{image\_available\_semaphore\_}}
+{\footnotesize\ttfamily Vk\+Semaphore vulkan\+\_\+application\+::image\+\_\+available\+\_\+semaphore\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a8aee36b907c294735195b3e609c995cf}\label{classvulkan__application_a8aee36b907c294735195b3e609c995cf}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!index\+\_\+buffer\+\_\+@{index\+\_\+buffer\+\_\+}}
+\index{index\+\_\+buffer\+\_\+@{index\+\_\+buffer\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{index\+\_\+buffer\+\_\+}{index\_buffer\_}}
+{\footnotesize\ttfamily Vk\+Buffer vulkan\+\_\+application\+::index\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a75c49696265e13861e7867385fa454e9}\label{classvulkan__application_a75c49696265e13861e7867385fa454e9}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!index\+\_\+buffer\+\_\+memory\+\_\+@{index\+\_\+buffer\+\_\+memory\+\_\+}}
+\index{index\+\_\+buffer\+\_\+memory\+\_\+@{index\+\_\+buffer\+\_\+memory\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{index\+\_\+buffer\+\_\+memory\+\_\+}{index\_buffer\_memory\_}}
+{\footnotesize\ttfamily Vk\+Device\+Memory vulkan\+\_\+application\+::index\+\_\+buffer\+\_\+memory\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a1f890b4eb7b99da38b17c7fa938846d7}\label{classvulkan__application_a1f890b4eb7b99da38b17c7fa938846d7}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!logical\+\_\+device\+\_\+@{logical\+\_\+device\+\_\+}}
+\index{logical\+\_\+device\+\_\+@{logical\+\_\+device\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{logical\+\_\+device\+\_\+}{logical\_device\_}}
+{\footnotesize\ttfamily Vk\+Device vulkan\+\_\+application\+::logical\+\_\+device\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_ae3478ed1667c4e9e3728d5c0b90cc18b}\label{classvulkan__application_ae3478ed1667c4e9e3728d5c0b90cc18b}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!physical\+\_\+device\+\_\+@{physical\+\_\+device\+\_\+}}
+\index{physical\+\_\+device\+\_\+@{physical\+\_\+device\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{physical\+\_\+device\+\_\+}{physical\_device\_}}
+{\footnotesize\ttfamily Vk\+Physical\+Device vulkan\+\_\+application\+::physical\+\_\+device\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a1c0aeeab90c543c4ad36ca9613053412}\label{classvulkan__application_a1c0aeeab90c543c4ad36ca9613053412}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!pipeline\+\_\+layout\+\_\+@{pipeline\+\_\+layout\+\_\+}}
+\index{pipeline\+\_\+layout\+\_\+@{pipeline\+\_\+layout\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{pipeline\+\_\+layout\+\_\+}{pipeline\_layout\_}}
+{\footnotesize\ttfamily Vk\+Pipeline\+Layout vulkan\+\_\+application\+::pipeline\+\_\+layout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a0ea345da04dec8dfa152119f18a9d83f}\label{classvulkan__application_a0ea345da04dec8dfa152119f18a9d83f}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!present\+\_\+queue\+\_\+@{present\+\_\+queue\+\_\+}}
+\index{present\+\_\+queue\+\_\+@{present\+\_\+queue\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{present\+\_\+queue\+\_\+}{present\_queue\_}}
+{\footnotesize\ttfamily Vk\+Queue vulkan\+\_\+application\+::present\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a44c5124568762f2c900ac144b8770356}\label{classvulkan__application_a44c5124568762f2c900ac144b8770356}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!render\+\_\+finished\+\_\+semaphore\+\_\+@{render\+\_\+finished\+\_\+semaphore\+\_\+}}
+\index{render\+\_\+finished\+\_\+semaphore\+\_\+@{render\+\_\+finished\+\_\+semaphore\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{render\+\_\+finished\+\_\+semaphore\+\_\+}{render\_finished\_semaphore\_}}
+{\footnotesize\ttfamily Vk\+Semaphore vulkan\+\_\+application\+::render\+\_\+finished\+\_\+semaphore\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a1886de8ac493fca76ca2cf91b29795e6}\label{classvulkan__application_a1886de8ac493fca76ca2cf91b29795e6}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!render\+\_\+pass\+\_\+@{render\+\_\+pass\+\_\+}}
+\index{render\+\_\+pass\+\_\+@{render\+\_\+pass\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{render\+\_\+pass\+\_\+}{render\_pass\_}}
+{\footnotesize\ttfamily Vk\+Render\+Pass vulkan\+\_\+application\+::render\+\_\+pass\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a54a50845f409d0973e2f52f65a9cec1d}\label{classvulkan__application_a54a50845f409d0973e2f52f65a9cec1d}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!sdl\+\_\+window\+\_\+@{sdl\+\_\+window\+\_\+}}
+\index{sdl\+\_\+window\+\_\+@{sdl\+\_\+window\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{sdl\+\_\+window\+\_\+}{sdl\_window\_}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ vulkan\+\_\+application\+::sdl\+\_\+window\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a371a0f23b472dd5b864ab7f6216a62f9}\label{classvulkan__application_a371a0f23b472dd5b864ab7f6216a62f9}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!swap\+\_\+chain\+\_\+@{swap\+\_\+chain\+\_\+}}
+\index{swap\+\_\+chain\+\_\+@{swap\+\_\+chain\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{swap\+\_\+chain\+\_\+}{swap\_chain\_}}
+{\footnotesize\ttfamily Vk\+Swapchain\+K\+HR vulkan\+\_\+application\+::swap\+\_\+chain\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a2546d682f51a41d69810f1a6f1668aa6}\label{classvulkan__application_a2546d682f51a41d69810f1a6f1668aa6}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!swap\+\_\+chain\+\_\+extent\+\_\+@{swap\+\_\+chain\+\_\+extent\+\_\+}}
+\index{swap\+\_\+chain\+\_\+extent\+\_\+@{swap\+\_\+chain\+\_\+extent\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{swap\+\_\+chain\+\_\+extent\+\_\+}{swap\_chain\_extent\_}}
+{\footnotesize\ttfamily Vk\+Extent2D vulkan\+\_\+application\+::swap\+\_\+chain\+\_\+extent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a16194c6e60f79f3e455afd39d8ee01f6}\label{classvulkan__application_a16194c6e60f79f3e455afd39d8ee01f6}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!swap\+\_\+chain\+\_\+framebuffers\+\_\+@{swap\+\_\+chain\+\_\+framebuffers\+\_\+}}
+\index{swap\+\_\+chain\+\_\+framebuffers\+\_\+@{swap\+\_\+chain\+\_\+framebuffers\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{swap\+\_\+chain\+\_\+framebuffers\+\_\+}{swap\_chain\_framebuffers\_}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Framebuffer$>$ vulkan\+\_\+application\+::swap\+\_\+chain\+\_\+framebuffers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a3d95f5900aecca3ee3a3d1b4ae217090}\label{classvulkan__application_a3d95f5900aecca3ee3a3d1b4ae217090}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!swap\+\_\+chain\+\_\+image\+\_\+format\+\_\+@{swap\+\_\+chain\+\_\+image\+\_\+format\+\_\+}}
+\index{swap\+\_\+chain\+\_\+image\+\_\+format\+\_\+@{swap\+\_\+chain\+\_\+image\+\_\+format\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{swap\+\_\+chain\+\_\+image\+\_\+format\+\_\+}{swap\_chain\_image\_format\_}}
+{\footnotesize\ttfamily Vk\+Format vulkan\+\_\+application\+::swap\+\_\+chain\+\_\+image\+\_\+format\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_ab2055e66f040916c7629ca379b159f95}\label{classvulkan__application_ab2055e66f040916c7629ca379b159f95}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!swap\+\_\+chain\+\_\+image\+\_\+views\+\_\+@{swap\+\_\+chain\+\_\+image\+\_\+views\+\_\+}}
+\index{swap\+\_\+chain\+\_\+image\+\_\+views\+\_\+@{swap\+\_\+chain\+\_\+image\+\_\+views\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{swap\+\_\+chain\+\_\+image\+\_\+views\+\_\+}{swap\_chain\_image\_views\_}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Image\+View$>$ vulkan\+\_\+application\+::swap\+\_\+chain\+\_\+image\+\_\+views\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a807f02a6ea2ac40920ade18d8bb7f014}\label{classvulkan__application_a807f02a6ea2ac40920ade18d8bb7f014}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!swap\+\_\+chain\+\_\+images\+\_\+@{swap\+\_\+chain\+\_\+images\+\_\+}}
+\index{swap\+\_\+chain\+\_\+images\+\_\+@{swap\+\_\+chain\+\_\+images\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{swap\+\_\+chain\+\_\+images\+\_\+}{swap\_chain\_images\_}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Image$>$ vulkan\+\_\+application\+::swap\+\_\+chain\+\_\+images\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a4482a98825a11fdb7775c7bf1d7cec04}\label{classvulkan__application_a4482a98825a11fdb7775c7bf1d7cec04}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!uniform\+\_\+buffer\+\_\+@{uniform\+\_\+buffer\+\_\+}}
+\index{uniform\+\_\+buffer\+\_\+@{uniform\+\_\+buffer\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{uniform\+\_\+buffer\+\_\+}{uniform\_buffer\_}}
+{\footnotesize\ttfamily Vk\+Buffer vulkan\+\_\+application\+::uniform\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a2c85c8c670b5929b16385ca2f6ea8f00}\label{classvulkan__application_a2c85c8c670b5929b16385ca2f6ea8f00}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!uniform\+\_\+buffer\+\_\+memory\+\_\+@{uniform\+\_\+buffer\+\_\+memory\+\_\+}}
+\index{uniform\+\_\+buffer\+\_\+memory\+\_\+@{uniform\+\_\+buffer\+\_\+memory\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{uniform\+\_\+buffer\+\_\+memory\+\_\+}{uniform\_buffer\_memory\_}}
+{\footnotesize\ttfamily Vk\+Device\+Memory vulkan\+\_\+application\+::uniform\+\_\+buffer\+\_\+memory\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_ab4dbb1dfeff5f1808f0453b21caee32a}\label{classvulkan__application_ab4dbb1dfeff5f1808f0453b21caee32a}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}}
+\index{vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{vertex\+\_\+buffer\+\_\+}{vertex\_buffer\_}}
+{\footnotesize\ttfamily Vk\+Buffer vulkan\+\_\+application\+::vertex\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_ac3d1ae7db9706875a138f3da07c5e78c}\label{classvulkan__application_ac3d1ae7db9706875a138f3da07c5e78c}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!vertex\+\_\+buffer\+\_\+memory\+\_\+@{vertex\+\_\+buffer\+\_\+memory\+\_\+}}
+\index{vertex\+\_\+buffer\+\_\+memory\+\_\+@{vertex\+\_\+buffer\+\_\+memory\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{vertex\+\_\+buffer\+\_\+memory\+\_\+}{vertex\_buffer\_memory\_}}
+{\footnotesize\ttfamily Vk\+Device\+Memory vulkan\+\_\+application\+::vertex\+\_\+buffer\+\_\+memory\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_adaadd43d3b44441517543a3dab918cbb}\label{classvulkan__application_adaadd43d3b44441517543a3dab918cbb}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!vulkan\+\_\+instance\+\_\+@{vulkan\+\_\+instance\+\_\+}}
+\index{vulkan\+\_\+instance\+\_\+@{vulkan\+\_\+instance\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{vulkan\+\_\+instance\+\_\+}{vulkan\_instance\_}}
+{\footnotesize\ttfamily Vk\+Instance vulkan\+\_\+application\+::vulkan\+\_\+instance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvulkan__application_a2492ee7a49aab081e5ab348981bece0e}\label{classvulkan__application_a2492ee7a49aab081e5ab348981bece0e}} 
+\index{vulkan\+\_\+application@{vulkan\+\_\+application}!vulkan\+\_\+surface\+\_\+@{vulkan\+\_\+surface\+\_\+}}
+\index{vulkan\+\_\+surface\+\_\+@{vulkan\+\_\+surface\+\_\+}!vulkan\+\_\+application@{vulkan\+\_\+application}}
+\subsubsection{\texorpdfstring{vulkan\+\_\+surface\+\_\+}{vulkan\_surface\_}}
+{\footnotesize\ttfamily Vk\+Surface\+K\+HR vulkan\+\_\+application\+::vulkan\+\_\+surface\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vulkan/\mbox{\hyperlink{vulkan__application_8h}{vulkan\+\_\+application.\+h}}\item 
+Vulkan/\mbox{\hyperlink{vulkan__application_8cpp}{vulkan\+\_\+application.\+cpp}}\end{DoxyCompactItemize}

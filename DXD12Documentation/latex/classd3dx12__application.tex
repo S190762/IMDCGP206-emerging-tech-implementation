@@ -1,0 +1,308 @@
+\hypertarget{classd3dx12__application}{}\section{d3dx12\+\_\+application Class Reference}
+\label{classd3dx12__application}\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+
+
+Provide an example of how to use D3\+D\+X12.  
+
+
+
+
+{\ttfamily \#include $<$d3dx12\+\_\+application.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classd3dx12__application_a0d4d4dfd3706acb56a506c5372c05042}{run}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classd3dx12__application_ae3510bf48db929de749956b6d7997a4a}{width\+\_\+}} = 800
+\item 
+int \mbox{\hyperlink{classd3dx12__application_a3bdbeb95fd1d97f8478e06acad151967}{height\+\_\+}} = 600
+\item 
+int \mbox{\hyperlink{classd3dx12__application_aaf766368abb157a0063084ad8dc38c03}{frame\+\_\+index\+\_\+}}
+\item 
+int \mbox{\hyperlink{classd3dx12__application_aaee210e2d0e3edf82a7c6fea4614291a}{rtv\+\_\+descriptor\+\_\+size\+\_\+}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classd3dx12__application_a97243eddb3d0590da534807dc6c7869c}{initialize\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em Create the S\+D\+L2 window and obtain the win32 handle of it. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classd3dx12__application_a6edf0fc7ee64b654e85201c6600de712}{init\+\_\+d3d}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the DirectX 12 A\+PI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classd3dx12__application_ab229777796514cc833d878416ba88ff6}{wait\+\_\+for\+\_\+previous\+\_\+frame}} ()
+\begin{DoxyCompactList}\small\item\em Wait for the previous frame to continue rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classd3dx12__application_a32f96cc36815978e294e58eaaa1d4a79}{update\+\_\+pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Update the pipeline. This is where draw commands are. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classd3dx12__application_a5d5a6a27cf79f7de39c01431d27b8a64}{render}} ()
+\begin{DoxyCompactList}\small\item\em Render. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classd3dx12__application_a47fa5a8d1975c52b9b9531e602b8da6a}{cleanup}} ()
+\item 
+void \mbox{\hyperlink{classd3dx12__application_af8acf4cd1008650390012b4429dda668}{mainloop}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+H\+W\+ND \mbox{\hyperlink{classd3dx12__application_a2bc9643a52b73ad736cb566763df6d52}{hwnd\+\_\+}} = nullptr
+\item 
+I\+D3\+D12\+Device $\ast$ \mbox{\hyperlink{classd3dx12__application_ab7e2b19372fb1c9f0d0de3c8090b0fe7}{device\+\_\+}}
+\item 
+I\+D\+X\+G\+I\+Swap\+Chain3 $\ast$ \mbox{\hyperlink{classd3dx12__application_ab81e4a71aaceebe670c38ea5931d7c4f}{swap\+\_\+chain\+\_\+}}
+\item 
+I\+D3\+D12\+Command\+Queue $\ast$ \mbox{\hyperlink{classd3dx12__application_a3d1b06ead76895d8cc54918a42b9a9c1}{command\+\_\+queue\+\_\+}}
+\item 
+I\+D3\+D12\+Descriptor\+Heap $\ast$ \mbox{\hyperlink{classd3dx12__application_ac7da8bb64d2c548b8662de17ea596fdf}{rtv\+\_\+descriptor\+\_\+heap\+\_\+}}
+\item 
+I\+D3\+D12\+Resource $\ast$ \mbox{\hyperlink{classd3dx12__application_a548109d54a2b4edf4f902d91899c8830}{render\+\_\+targets\+\_\+}} \mbox{[}3\mbox{]}
+\item 
+I\+D3\+D12\+Command\+Allocator $\ast$ \mbox{\hyperlink{classd3dx12__application_a04f68df0faf2e091acd9485fc92ca287}{command\+\_\+allocator\+\_\+}} \mbox{[}3\mbox{]}
+\item 
+I\+D3\+D12\+Graphics\+Command\+List $\ast$ \mbox{\hyperlink{classd3dx12__application_aabe4a77ad982172f0e3ee4b9ddcafc82}{command\+\_\+list\+\_\+}}
+\item 
+I\+D3\+D12\+Fence $\ast$ \mbox{\hyperlink{classd3dx12__application_aeebea9eaef7f0bfe014aadf43c6cc098}{fence\+\_\+}} \mbox{[}3\mbox{]}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{classd3dx12__application_a6ca972b53ae95711d67e47ba266bd014}{fence\+\_\+event\+\_\+}}
+\item 
+U\+I\+N\+T64 \mbox{\hyperlink{classd3dx12__application_a4b6159dfc534b858719a8b274c3d42e0}{fence\+\_\+value\+\_\+}} \mbox{[}3\mbox{]}
+\item 
+I\+D3\+D12\+Pipeline\+State $\ast$ \mbox{\hyperlink{classd3dx12__application_abe5725448143a62d890690b068ff8343}{pipeline\+\_\+state\+\_\+object\+\_\+state\+\_\+}}
+\item 
+I\+D3\+D12\+Root\+Signature $\ast$ \mbox{\hyperlink{classd3dx12__application_a1378df560de88d39147c05099b1b03c4}{root\+\_\+signature\+\_\+}}
+\item 
+D3\+D12\+\_\+\+V\+I\+E\+W\+P\+O\+RT \mbox{\hyperlink{classd3dx12__application_a3850b4dd8680e9cc85fac2919dde853a}{viewport\+\_\+}}
+\item 
+D3\+D12\+\_\+\+R\+E\+CT \mbox{\hyperlink{classd3dx12__application_acf5853fd413b7bdad1dd8e665cd47450}{scissor\+\_\+rect\+\_\+}}
+\item 
+I\+D3\+D12\+Resource $\ast$ \mbox{\hyperlink{classd3dx12__application_a8bbe015c0ae2ccf5aa1457d49c5b72d0}{vertex\+\_\+buffer\+\_\+}}
+\item 
+D3\+D12\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+V\+I\+EW \mbox{\hyperlink{classd3dx12__application_ac793221410fe3f40002313055c8b1226}{vertex\+\_\+buffer\+\_\+view\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provide an example of how to use D3\+D\+X12. 
+
+This is a basic example of how to display a coloured triangle using DirectX 12 api. The S\+D\+L2 library is used for window and surface creation.
+
+\begin{DoxyAuthor}{Author}
+Alixander Roden The University Of Suffolk Ipswich, United Kingdom
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018/04/30 05\+:01\+:00
+\end{DoxyDate}
+Contact\+: \href{mailto:S190762@uos.ac.uk}{\tt S190762@uos.\+ac.\+uk}
+
+Last Updated on\+: 30th April 2018 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classd3dx12__application_a47fa5a8d1975c52b9b9531e602b8da6a}\label{classd3dx12__application_a47fa5a8d1975c52b9b9531e602b8da6a}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void d3dx12\+\_\+application\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a6edf0fc7ee64b654e85201c6600de712}\label{classd3dx12__application_a6edf0fc7ee64b654e85201c6600de712}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!init\+\_\+d3d@{init\+\_\+d3d}}
+\index{init\+\_\+d3d@{init\+\_\+d3d}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{init\+\_\+d3d()}{init\_d3d()}}
+{\footnotesize\ttfamily bool d3dx12\+\_\+application\+::init\+\_\+d3d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the DirectX 12 A\+PI. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classd3dx12__application_a97243eddb3d0590da534807dc6c7869c}\label{classd3dx12__application_a97243eddb3d0590da534807dc6c7869c}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!initialize\+\_\+window@{initialize\+\_\+window}}
+\index{initialize\+\_\+window@{initialize\+\_\+window}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{initialize\+\_\+window()}{initialize\_window()}}
+{\footnotesize\ttfamily bool d3dx12\+\_\+application\+::initialize\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the S\+D\+L2 window and obtain the win32 handle of it. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classd3dx12__application_af8acf4cd1008650390012b4429dda668}\label{classd3dx12__application_af8acf4cd1008650390012b4429dda668}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!mainloop@{mainloop}}
+\index{mainloop@{mainloop}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{mainloop()}{mainloop()}}
+{\footnotesize\ttfamily void d3dx12\+\_\+application\+::mainloop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a5d5a6a27cf79f7de39c01431d27b8a64}\label{classd3dx12__application_a5d5a6a27cf79f7de39c01431d27b8a64}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!render@{render}}
+\index{render@{render}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void d3dx12\+\_\+application\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Render. 
+
+\mbox{\Hypertarget{classd3dx12__application_a0d4d4dfd3706acb56a506c5372c05042}\label{classd3dx12__application_a0d4d4dfd3706acb56a506c5372c05042}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!run@{run}}
+\index{run@{run}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void d3dx12\+\_\+application\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classd3dx12__application_a32f96cc36815978e294e58eaaa1d4a79}\label{classd3dx12__application_a32f96cc36815978e294e58eaaa1d4a79}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!update\+\_\+pipeline@{update\+\_\+pipeline}}
+\index{update\+\_\+pipeline@{update\+\_\+pipeline}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{update\+\_\+pipeline()}{update\_pipeline()}}
+{\footnotesize\ttfamily void d3dx12\+\_\+application\+::update\+\_\+pipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the pipeline. This is where draw commands are. 
+
+\mbox{\Hypertarget{classd3dx12__application_ab229777796514cc833d878416ba88ff6}\label{classd3dx12__application_ab229777796514cc833d878416ba88ff6}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!wait\+\_\+for\+\_\+previous\+\_\+frame@{wait\+\_\+for\+\_\+previous\+\_\+frame}}
+\index{wait\+\_\+for\+\_\+previous\+\_\+frame@{wait\+\_\+for\+\_\+previous\+\_\+frame}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+previous\+\_\+frame()}{wait\_for\_previous\_frame()}}
+{\footnotesize\ttfamily void d3dx12\+\_\+application\+::wait\+\_\+for\+\_\+previous\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wait for the previous frame to continue rendering. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classd3dx12__application_a04f68df0faf2e091acd9485fc92ca287}\label{classd3dx12__application_a04f68df0faf2e091acd9485fc92ca287}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!command\+\_\+allocator\+\_\+@{command\+\_\+allocator\+\_\+}}
+\index{command\+\_\+allocator\+\_\+@{command\+\_\+allocator\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{command\+\_\+allocator\+\_\+}{command\_allocator\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Command\+Allocator$\ast$ d3dx12\+\_\+application\+::command\+\_\+allocator\+\_\+\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_aabe4a77ad982172f0e3ee4b9ddcafc82}\label{classd3dx12__application_aabe4a77ad982172f0e3ee4b9ddcafc82}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!command\+\_\+list\+\_\+@{command\+\_\+list\+\_\+}}
+\index{command\+\_\+list\+\_\+@{command\+\_\+list\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{command\+\_\+list\+\_\+}{command\_list\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Graphics\+Command\+List$\ast$ d3dx12\+\_\+application\+::command\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a3d1b06ead76895d8cc54918a42b9a9c1}\label{classd3dx12__application_a3d1b06ead76895d8cc54918a42b9a9c1}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!command\+\_\+queue\+\_\+@{command\+\_\+queue\+\_\+}}
+\index{command\+\_\+queue\+\_\+@{command\+\_\+queue\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{command\+\_\+queue\+\_\+}{command\_queue\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Command\+Queue$\ast$ d3dx12\+\_\+application\+::command\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_ab7e2b19372fb1c9f0d0de3c8090b0fe7}\label{classd3dx12__application_ab7e2b19372fb1c9f0d0de3c8090b0fe7}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Device$\ast$ d3dx12\+\_\+application\+::device\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_aeebea9eaef7f0bfe014aadf43c6cc098}\label{classd3dx12__application_aeebea9eaef7f0bfe014aadf43c6cc098}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!fence\+\_\+@{fence\+\_\+}}
+\index{fence\+\_\+@{fence\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{fence\+\_\+}{fence\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Fence$\ast$ d3dx12\+\_\+application\+::fence\+\_\+\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a6ca972b53ae95711d67e47ba266bd014}\label{classd3dx12__application_a6ca972b53ae95711d67e47ba266bd014}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!fence\+\_\+event\+\_\+@{fence\+\_\+event\+\_\+}}
+\index{fence\+\_\+event\+\_\+@{fence\+\_\+event\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{fence\+\_\+event\+\_\+}{fence\_event\_}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE d3dx12\+\_\+application\+::fence\+\_\+event\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a4b6159dfc534b858719a8b274c3d42e0}\label{classd3dx12__application_a4b6159dfc534b858719a8b274c3d42e0}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!fence\+\_\+value\+\_\+@{fence\+\_\+value\+\_\+}}
+\index{fence\+\_\+value\+\_\+@{fence\+\_\+value\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{fence\+\_\+value\+\_\+}{fence\_value\_}}
+{\footnotesize\ttfamily U\+I\+N\+T64 d3dx12\+\_\+application\+::fence\+\_\+value\+\_\+\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_aaf766368abb157a0063084ad8dc38c03}\label{classd3dx12__application_aaf766368abb157a0063084ad8dc38c03}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!frame\+\_\+index\+\_\+@{frame\+\_\+index\+\_\+}}
+\index{frame\+\_\+index\+\_\+@{frame\+\_\+index\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{frame\+\_\+index\+\_\+}{frame\_index\_}}
+{\footnotesize\ttfamily int d3dx12\+\_\+application\+::frame\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a3bdbeb95fd1d97f8478e06acad151967}\label{classd3dx12__application_a3bdbeb95fd1d97f8478e06acad151967}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!height\+\_\+@{height\+\_\+}}
+\index{height\+\_\+@{height\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{height\+\_\+}{height\_}}
+{\footnotesize\ttfamily int d3dx12\+\_\+application\+::height\+\_\+ = 600\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a2bc9643a52b73ad736cb566763df6d52}\label{classd3dx12__application_a2bc9643a52b73ad736cb566763df6d52}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!hwnd\+\_\+@{hwnd\+\_\+}}
+\index{hwnd\+\_\+@{hwnd\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{hwnd\+\_\+}{hwnd\_}}
+{\footnotesize\ttfamily H\+W\+ND d3dx12\+\_\+application\+::hwnd\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_abe5725448143a62d890690b068ff8343}\label{classd3dx12__application_abe5725448143a62d890690b068ff8343}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!pipeline\+\_\+state\+\_\+object\+\_\+state\+\_\+@{pipeline\+\_\+state\+\_\+object\+\_\+state\+\_\+}}
+\index{pipeline\+\_\+state\+\_\+object\+\_\+state\+\_\+@{pipeline\+\_\+state\+\_\+object\+\_\+state\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{pipeline\+\_\+state\+\_\+object\+\_\+state\+\_\+}{pipeline\_state\_object\_state\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Pipeline\+State$\ast$ d3dx12\+\_\+application\+::pipeline\+\_\+state\+\_\+object\+\_\+state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a548109d54a2b4edf4f902d91899c8830}\label{classd3dx12__application_a548109d54a2b4edf4f902d91899c8830}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!render\+\_\+targets\+\_\+@{render\+\_\+targets\+\_\+}}
+\index{render\+\_\+targets\+\_\+@{render\+\_\+targets\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{render\+\_\+targets\+\_\+}{render\_targets\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Resource$\ast$ d3dx12\+\_\+application\+::render\+\_\+targets\+\_\+\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a1378df560de88d39147c05099b1b03c4}\label{classd3dx12__application_a1378df560de88d39147c05099b1b03c4}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!root\+\_\+signature\+\_\+@{root\+\_\+signature\+\_\+}}
+\index{root\+\_\+signature\+\_\+@{root\+\_\+signature\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{root\+\_\+signature\+\_\+}{root\_signature\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Root\+Signature$\ast$ d3dx12\+\_\+application\+::root\+\_\+signature\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_ac7da8bb64d2c548b8662de17ea596fdf}\label{classd3dx12__application_ac7da8bb64d2c548b8662de17ea596fdf}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!rtv\+\_\+descriptor\+\_\+heap\+\_\+@{rtv\+\_\+descriptor\+\_\+heap\+\_\+}}
+\index{rtv\+\_\+descriptor\+\_\+heap\+\_\+@{rtv\+\_\+descriptor\+\_\+heap\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{rtv\+\_\+descriptor\+\_\+heap\+\_\+}{rtv\_descriptor\_heap\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Descriptor\+Heap$\ast$ d3dx12\+\_\+application\+::rtv\+\_\+descriptor\+\_\+heap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_aaee210e2d0e3edf82a7c6fea4614291a}\label{classd3dx12__application_aaee210e2d0e3edf82a7c6fea4614291a}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!rtv\+\_\+descriptor\+\_\+size\+\_\+@{rtv\+\_\+descriptor\+\_\+size\+\_\+}}
+\index{rtv\+\_\+descriptor\+\_\+size\+\_\+@{rtv\+\_\+descriptor\+\_\+size\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{rtv\+\_\+descriptor\+\_\+size\+\_\+}{rtv\_descriptor\_size\_}}
+{\footnotesize\ttfamily int d3dx12\+\_\+application\+::rtv\+\_\+descriptor\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classd3dx12__application_acf5853fd413b7bdad1dd8e665cd47450}\label{classd3dx12__application_acf5853fd413b7bdad1dd8e665cd47450}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!scissor\+\_\+rect\+\_\+@{scissor\+\_\+rect\+\_\+}}
+\index{scissor\+\_\+rect\+\_\+@{scissor\+\_\+rect\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{scissor\+\_\+rect\+\_\+}{scissor\_rect\_}}
+{\footnotesize\ttfamily D3\+D12\+\_\+\+R\+E\+CT d3dx12\+\_\+application\+::scissor\+\_\+rect\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_ab81e4a71aaceebe670c38ea5931d7c4f}\label{classd3dx12__application_ab81e4a71aaceebe670c38ea5931d7c4f}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!swap\+\_\+chain\+\_\+@{swap\+\_\+chain\+\_\+}}
+\index{swap\+\_\+chain\+\_\+@{swap\+\_\+chain\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{swap\+\_\+chain\+\_\+}{swap\_chain\_}}
+{\footnotesize\ttfamily I\+D\+X\+G\+I\+Swap\+Chain3$\ast$ d3dx12\+\_\+application\+::swap\+\_\+chain\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a8bbe015c0ae2ccf5aa1457d49c5b72d0}\label{classd3dx12__application_a8bbe015c0ae2ccf5aa1457d49c5b72d0}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}}
+\index{vertex\+\_\+buffer\+\_\+@{vertex\+\_\+buffer\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{vertex\+\_\+buffer\+\_\+}{vertex\_buffer\_}}
+{\footnotesize\ttfamily I\+D3\+D12\+Resource$\ast$ d3dx12\+\_\+application\+::vertex\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_ac793221410fe3f40002313055c8b1226}\label{classd3dx12__application_ac793221410fe3f40002313055c8b1226}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!vertex\+\_\+buffer\+\_\+view\+\_\+@{vertex\+\_\+buffer\+\_\+view\+\_\+}}
+\index{vertex\+\_\+buffer\+\_\+view\+\_\+@{vertex\+\_\+buffer\+\_\+view\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{vertex\+\_\+buffer\+\_\+view\+\_\+}{vertex\_buffer\_view\_}}
+{\footnotesize\ttfamily D3\+D12\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+V\+I\+EW d3dx12\+\_\+application\+::vertex\+\_\+buffer\+\_\+view\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_a3850b4dd8680e9cc85fac2919dde853a}\label{classd3dx12__application_a3850b4dd8680e9cc85fac2919dde853a}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!viewport\+\_\+@{viewport\+\_\+}}
+\index{viewport\+\_\+@{viewport\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{viewport\+\_\+}{viewport\_}}
+{\footnotesize\ttfamily D3\+D12\+\_\+\+V\+I\+E\+W\+P\+O\+RT d3dx12\+\_\+application\+::viewport\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classd3dx12__application_ae3510bf48db929de749956b6d7997a4a}\label{classd3dx12__application_ae3510bf48db929de749956b6d7997a4a}} 
+\index{d3dx12\+\_\+application@{d3dx12\+\_\+application}!width\+\_\+@{width\+\_\+}}
+\index{width\+\_\+@{width\+\_\+}!d3dx12\+\_\+application@{d3dx12\+\_\+application}}
+\subsubsection{\texorpdfstring{width\+\_\+}{width\_}}
+{\footnotesize\ttfamily int d3dx12\+\_\+application\+::width\+\_\+ = 800\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+X\+D12/\mbox{\hyperlink{d3dx12__application_8h}{d3dx12\+\_\+application.\+h}}\item 
+D\+X\+D12/\mbox{\hyperlink{d3dx12__application_8cpp}{d3dx12\+\_\+application.\+cpp}}\end{DoxyCompactItemize}

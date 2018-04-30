@@ -1,0 +1,307 @@
+\hypertarget{stdafx_8h}{}\section{D\+X\+D12/stdafx.h File Reference}
+\label{stdafx_8h}\index{D\+X\+D12/stdafx.\+h@{D\+X\+D12/stdafx.\+h}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$d3d12.\+h$>$}\newline
+{\ttfamily \#include $<$dxgi1\+\_\+4.\+h$>$}\newline
+{\ttfamily \#include $<$D3\+Dcompiler.\+h$>$}\newline
+{\ttfamily \#include $<$Direct\+X\+Math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}d3dx12.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stdafx_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}}
+\item 
+\#define \mbox{\hyperlink{stdafx_8h_a6038f7bdb274c2e159988a57dedbf93d}{S\+A\+F\+E\+\_\+\+R\+E\+L\+E\+A\+SE}}(p)~\{ if ( (p) ) \{ (p)-\/$>$Release(); (p) = 0; \} \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{stdafx_8h_ac1db543444a11e1e62b6a10f4864ed8d}{Initialize\+Window}} ()
+\item 
+void \mbox{\hyperlink{stdafx_8h_a896df4ffe3f986ad843e4d191cd712b3}{mainloop}} ()
+\item 
+bool \mbox{\hyperlink{stdafx_8h_ae3b64492388df50028910bfce20d08e0}{Init\+D3D}} ()
+\item 
+void \mbox{\hyperlink{stdafx_8h_aec0783b5a136e042adcc47bae4fe5291}{Update}} ()
+\item 
+void \mbox{\hyperlink{stdafx_8h_af14b065e4c1272ba70f558e3ab084f96}{Update\+Pipeline}} ()
+\item 
+void \mbox{\hyperlink{stdafx_8h_a436830dff9fbce05c931c5a6d8d5366d}{Render}} ()
+\item 
+void \mbox{\hyperlink{stdafx_8h_ae89a123aad1c66a76c398b7af216aae4}{Cleanup}} ()
+\item 
+void \mbox{\hyperlink{stdafx_8h_a54aeffc77f48fe83be424574df75460e}{Wait\+For\+Previous\+Frame}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+H\+W\+ND \mbox{\hyperlink{stdafx_8h_aa72255e7356d612ad72bb45def01fcbb}{hwnd}} = N\+U\+LL
+\item 
+const char $\ast$ \mbox{\hyperlink{stdafx_8h_a758be6161c61a39d955719387e6f5b25}{Window\+Title}} = \char`\"{}Direct\+X12\char`\"{}
+\item 
+int \mbox{\hyperlink{stdafx_8h_abbe7749c3b402f7dfe64f936774cfcd4}{Width}} = 800
+\item 
+int \mbox{\hyperlink{stdafx_8h_aaadefba794062a2ca7e58ceb10b955a1}{Height}} = 600
+\item 
+bool \mbox{\hyperlink{stdafx_8h_a0744ba1f9df91b0a4efb5b4de9a1979a}{Full\+Screen}} = false
+\item 
+bool \mbox{\hyperlink{stdafx_8h_ae2e97f1ebd7c956e2c68d1209eabd4b1}{Running}} = true
+\item 
+const int \mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}} = 3
+\item 
+I\+D3\+D12\+Device $\ast$ \mbox{\hyperlink{stdafx_8h_ada5511878669c815aa4242967adf3372}{device}}
+\item 
+I\+D\+X\+G\+I\+Swap\+Chain3 $\ast$ \mbox{\hyperlink{stdafx_8h_ac9b6b9e6c6f31f357fe9b5ca4a68be13}{swap\+Chain}}
+\item 
+I\+D3\+D12\+Command\+Queue $\ast$ \mbox{\hyperlink{stdafx_8h_a8a3073bd0331690bf0ea77018683399a}{command\+Queue}}
+\item 
+I\+D3\+D12\+Descriptor\+Heap $\ast$ \mbox{\hyperlink{stdafx_8h_a7aada4cd073dfb3a44d91054a2cc712b}{rtv\+Descriptor\+Heap}}
+\item 
+I\+D3\+D12\+Resource $\ast$ \mbox{\hyperlink{stdafx_8h_adaff445304c291d73f973a7c4a0dd373}{render\+Targets}} \mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}
+\item 
+I\+D3\+D12\+Command\+Allocator $\ast$ \mbox{\hyperlink{stdafx_8h_ab56d24fe997ca8e3a6fc22c9efed6627}{command\+Allocator}} \mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}
+\item 
+I\+D3\+D12\+Graphics\+Command\+List $\ast$ \mbox{\hyperlink{stdafx_8h_a4baa39837ea803b6fd1d97165db0fae9}{command\+List}}
+\item 
+I\+D3\+D12\+Fence $\ast$ \mbox{\hyperlink{stdafx_8h_a2304adf61e318e3477d1cbb07fae599f}{fence}} \mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{stdafx_8h_a3cf0114dc0bc187f26dcd83776d8c685}{fence\+Event}}
+\item 
+U\+I\+N\+T64 \mbox{\hyperlink{stdafx_8h_a70754f8b37b561166627c214e80744ee}{fence\+Value}} \mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}
+\item 
+int \mbox{\hyperlink{stdafx_8h_a15d0a070da269f218a53bb7739c9ad4c}{frame\+Index}}
+\item 
+int \mbox{\hyperlink{stdafx_8h_a881b5f2fe52c6e357828104245195a15}{rtv\+Descriptor\+Size}}
+\item 
+I\+D3\+D12\+Pipeline\+State $\ast$ \mbox{\hyperlink{stdafx_8h_a5452b5feae2afb37f6b04a32993cb476}{pipeline\+State\+Object}}
+\item 
+I\+D3\+D12\+Root\+Signature $\ast$ \mbox{\hyperlink{stdafx_8h_aece90aa3d2f5066fe8b1367ef0dc9288}{root\+Signature}}
+\item 
+D3\+D12\+\_\+\+V\+I\+E\+W\+P\+O\+RT \mbox{\hyperlink{stdafx_8h_af43513025951d1c37cb1bb363f2809e4}{viewport}}
+\item 
+D3\+D12\+\_\+\+R\+E\+CT \mbox{\hyperlink{stdafx_8h_a1edb43294b3f4f7bb9bdd1d89ef9f8a8}{scissor\+Rect}}
+\item 
+I\+D3\+D12\+Resource $\ast$ \mbox{\hyperlink{stdafx_8h_a077160028db6d0028287e24721d5c8b0}{vertex\+Buffer}}
+\item 
+D3\+D12\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+V\+I\+EW \mbox{\hyperlink{stdafx_8h_af09e8f8bf3fd811d3b64c1f0255a95fb}{vertex\+Buffer\+View}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stdafx_8h_a6038f7bdb274c2e159988a57dedbf93d}\label{stdafx_8h_a6038f7bdb274c2e159988a57dedbf93d}} 
+\index{stdafx.\+h@{stdafx.\+h}!S\+A\+F\+E\+\_\+\+R\+E\+L\+E\+A\+SE@{S\+A\+F\+E\+\_\+\+R\+E\+L\+E\+A\+SE}}
+\index{S\+A\+F\+E\+\_\+\+R\+E\+L\+E\+A\+SE@{S\+A\+F\+E\+\_\+\+R\+E\+L\+E\+A\+SE}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+F\+E\+\_\+\+R\+E\+L\+E\+A\+SE}{SAFE\_RELEASE}}
+{\footnotesize\ttfamily \#define S\+A\+F\+E\+\_\+\+R\+E\+L\+E\+A\+SE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\{ if ( (p) ) \{ (p)-\/$>$Release(); (p) = 0; \} \}}
+
+\mbox{\Hypertarget{stdafx_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}\label{stdafx_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}} 
+\index{stdafx.\+h@{stdafx.\+h}!W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN@{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}}
+\index{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN@{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}{WIN32\_LEAN\_AND\_MEAN}}
+{\footnotesize\ttfamily \#define W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{stdafx_8h_ae89a123aad1c66a76c398b7af216aae4}\label{stdafx_8h_ae89a123aad1c66a76c398b7af216aae4}} 
+\index{stdafx.\+h@{stdafx.\+h}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily void Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdafx_8h_ae3b64492388df50028910bfce20d08e0}\label{stdafx_8h_ae3b64492388df50028910bfce20d08e0}} 
+\index{stdafx.\+h@{stdafx.\+h}!Init\+D3D@{Init\+D3D}}
+\index{Init\+D3D@{Init\+D3D}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Init\+D3\+D()}{InitD3D()}}
+{\footnotesize\ttfamily bool Init\+D3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdafx_8h_ac1db543444a11e1e62b6a10f4864ed8d}\label{stdafx_8h_ac1db543444a11e1e62b6a10f4864ed8d}} 
+\index{stdafx.\+h@{stdafx.\+h}!Initialize\+Window@{Initialize\+Window}}
+\index{Initialize\+Window@{Initialize\+Window}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Initialize\+Window()}{InitializeWindow()}}
+{\footnotesize\ttfamily bool Initialize\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdafx_8h_a896df4ffe3f986ad843e4d191cd712b3}\label{stdafx_8h_a896df4ffe3f986ad843e4d191cd712b3}} 
+\index{stdafx.\+h@{stdafx.\+h}!mainloop@{mainloop}}
+\index{mainloop@{mainloop}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{mainloop()}{mainloop()}}
+{\footnotesize\ttfamily void mainloop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdafx_8h_a436830dff9fbce05c931c5a6d8d5366d}\label{stdafx_8h_a436830dff9fbce05c931c5a6d8d5366d}} 
+\index{stdafx.\+h@{stdafx.\+h}!Render@{Render}}
+\index{Render@{Render}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdafx_8h_aec0783b5a136e042adcc47bae4fe5291}\label{stdafx_8h_aec0783b5a136e042adcc47bae4fe5291}} 
+\index{stdafx.\+h@{stdafx.\+h}!Update@{Update}}
+\index{Update@{Update}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdafx_8h_af14b065e4c1272ba70f558e3ab084f96}\label{stdafx_8h_af14b065e4c1272ba70f558e3ab084f96}} 
+\index{stdafx.\+h@{stdafx.\+h}!Update\+Pipeline@{Update\+Pipeline}}
+\index{Update\+Pipeline@{Update\+Pipeline}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Update\+Pipeline()}{UpdatePipeline()}}
+{\footnotesize\ttfamily void Update\+Pipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stdafx_8h_a54aeffc77f48fe83be424574df75460e}\label{stdafx_8h_a54aeffc77f48fe83be424574df75460e}} 
+\index{stdafx.\+h@{stdafx.\+h}!Wait\+For\+Previous\+Frame@{Wait\+For\+Previous\+Frame}}
+\index{Wait\+For\+Previous\+Frame@{Wait\+For\+Previous\+Frame}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Wait\+For\+Previous\+Frame()}{WaitForPreviousFrame()}}
+{\footnotesize\ttfamily void Wait\+For\+Previous\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{stdafx_8h_ab56d24fe997ca8e3a6fc22c9efed6627}\label{stdafx_8h_ab56d24fe997ca8e3a6fc22c9efed6627}} 
+\index{stdafx.\+h@{stdafx.\+h}!command\+Allocator@{command\+Allocator}}
+\index{command\+Allocator@{command\+Allocator}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{command\+Allocator}{commandAllocator}}
+{\footnotesize\ttfamily I\+D3\+D12\+Command\+Allocator$\ast$ command\+Allocator\mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}}
+
+\mbox{\Hypertarget{stdafx_8h_a4baa39837ea803b6fd1d97165db0fae9}\label{stdafx_8h_a4baa39837ea803b6fd1d97165db0fae9}} 
+\index{stdafx.\+h@{stdafx.\+h}!command\+List@{command\+List}}
+\index{command\+List@{command\+List}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{command\+List}{commandList}}
+{\footnotesize\ttfamily I\+D3\+D12\+Graphics\+Command\+List$\ast$ command\+List}
+
+\mbox{\Hypertarget{stdafx_8h_a8a3073bd0331690bf0ea77018683399a}\label{stdafx_8h_a8a3073bd0331690bf0ea77018683399a}} 
+\index{stdafx.\+h@{stdafx.\+h}!command\+Queue@{command\+Queue}}
+\index{command\+Queue@{command\+Queue}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{command\+Queue}{commandQueue}}
+{\footnotesize\ttfamily I\+D3\+D12\+Command\+Queue$\ast$ command\+Queue}
+
+\mbox{\Hypertarget{stdafx_8h_ada5511878669c815aa4242967adf3372}\label{stdafx_8h_ada5511878669c815aa4242967adf3372}} 
+\index{stdafx.\+h@{stdafx.\+h}!device@{device}}
+\index{device@{device}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily I\+D3\+D12\+Device$\ast$ device}
+
+\mbox{\Hypertarget{stdafx_8h_a2304adf61e318e3477d1cbb07fae599f}\label{stdafx_8h_a2304adf61e318e3477d1cbb07fae599f}} 
+\index{stdafx.\+h@{stdafx.\+h}!fence@{fence}}
+\index{fence@{fence}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{fence}{fence}}
+{\footnotesize\ttfamily I\+D3\+D12\+Fence$\ast$ fence\mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}}
+
+\mbox{\Hypertarget{stdafx_8h_a3cf0114dc0bc187f26dcd83776d8c685}\label{stdafx_8h_a3cf0114dc0bc187f26dcd83776d8c685}} 
+\index{stdafx.\+h@{stdafx.\+h}!fence\+Event@{fence\+Event}}
+\index{fence\+Event@{fence\+Event}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{fence\+Event}{fenceEvent}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE fence\+Event}
+
+\mbox{\Hypertarget{stdafx_8h_a70754f8b37b561166627c214e80744ee}\label{stdafx_8h_a70754f8b37b561166627c214e80744ee}} 
+\index{stdafx.\+h@{stdafx.\+h}!fence\+Value@{fence\+Value}}
+\index{fence\+Value@{fence\+Value}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{fence\+Value}{fenceValue}}
+{\footnotesize\ttfamily U\+I\+N\+T64 fence\+Value\mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}}
+
+\mbox{\Hypertarget{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}\label{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}} 
+\index{stdafx.\+h@{stdafx.\+h}!frame\+Buffer\+Count@{frame\+Buffer\+Count}}
+\index{frame\+Buffer\+Count@{frame\+Buffer\+Count}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{frame\+Buffer\+Count}{frameBufferCount}}
+{\footnotesize\ttfamily const int frame\+Buffer\+Count = 3}
+
+\mbox{\Hypertarget{stdafx_8h_a15d0a070da269f218a53bb7739c9ad4c}\label{stdafx_8h_a15d0a070da269f218a53bb7739c9ad4c}} 
+\index{stdafx.\+h@{stdafx.\+h}!frame\+Index@{frame\+Index}}
+\index{frame\+Index@{frame\+Index}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{frame\+Index}{frameIndex}}
+{\footnotesize\ttfamily int frame\+Index}
+
+\mbox{\Hypertarget{stdafx_8h_a0744ba1f9df91b0a4efb5b4de9a1979a}\label{stdafx_8h_a0744ba1f9df91b0a4efb5b4de9a1979a}} 
+\index{stdafx.\+h@{stdafx.\+h}!Full\+Screen@{Full\+Screen}}
+\index{Full\+Screen@{Full\+Screen}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Full\+Screen}{FullScreen}}
+{\footnotesize\ttfamily bool Full\+Screen = false}
+
+\mbox{\Hypertarget{stdafx_8h_aaadefba794062a2ca7e58ceb10b955a1}\label{stdafx_8h_aaadefba794062a2ca7e58ceb10b955a1}} 
+\index{stdafx.\+h@{stdafx.\+h}!Height@{Height}}
+\index{Height@{Height}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily int Height = 600}
+
+\mbox{\Hypertarget{stdafx_8h_aa72255e7356d612ad72bb45def01fcbb}\label{stdafx_8h_aa72255e7356d612ad72bb45def01fcbb}} 
+\index{stdafx.\+h@{stdafx.\+h}!hwnd@{hwnd}}
+\index{hwnd@{hwnd}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{hwnd}{hwnd}}
+{\footnotesize\ttfamily H\+W\+ND hwnd = N\+U\+LL}
+
+\mbox{\Hypertarget{stdafx_8h_a5452b5feae2afb37f6b04a32993cb476}\label{stdafx_8h_a5452b5feae2afb37f6b04a32993cb476}} 
+\index{stdafx.\+h@{stdafx.\+h}!pipeline\+State\+Object@{pipeline\+State\+Object}}
+\index{pipeline\+State\+Object@{pipeline\+State\+Object}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{pipeline\+State\+Object}{pipelineStateObject}}
+{\footnotesize\ttfamily I\+D3\+D12\+Pipeline\+State$\ast$ pipeline\+State\+Object}
+
+\mbox{\Hypertarget{stdafx_8h_adaff445304c291d73f973a7c4a0dd373}\label{stdafx_8h_adaff445304c291d73f973a7c4a0dd373}} 
+\index{stdafx.\+h@{stdafx.\+h}!render\+Targets@{render\+Targets}}
+\index{render\+Targets@{render\+Targets}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{render\+Targets}{renderTargets}}
+{\footnotesize\ttfamily I\+D3\+D12\+Resource$\ast$ render\+Targets\mbox{[}\mbox{\hyperlink{stdafx_8h_abbec9b75e7260247e6c2750a1de1459d}{frame\+Buffer\+Count}}\mbox{]}}
+
+\mbox{\Hypertarget{stdafx_8h_aece90aa3d2f5066fe8b1367ef0dc9288}\label{stdafx_8h_aece90aa3d2f5066fe8b1367ef0dc9288}} 
+\index{stdafx.\+h@{stdafx.\+h}!root\+Signature@{root\+Signature}}
+\index{root\+Signature@{root\+Signature}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{root\+Signature}{rootSignature}}
+{\footnotesize\ttfamily I\+D3\+D12\+Root\+Signature$\ast$ root\+Signature}
+
+\mbox{\Hypertarget{stdafx_8h_a7aada4cd073dfb3a44d91054a2cc712b}\label{stdafx_8h_a7aada4cd073dfb3a44d91054a2cc712b}} 
+\index{stdafx.\+h@{stdafx.\+h}!rtv\+Descriptor\+Heap@{rtv\+Descriptor\+Heap}}
+\index{rtv\+Descriptor\+Heap@{rtv\+Descriptor\+Heap}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{rtv\+Descriptor\+Heap}{rtvDescriptorHeap}}
+{\footnotesize\ttfamily I\+D3\+D12\+Descriptor\+Heap$\ast$ rtv\+Descriptor\+Heap}
+
+\mbox{\Hypertarget{stdafx_8h_a881b5f2fe52c6e357828104245195a15}\label{stdafx_8h_a881b5f2fe52c6e357828104245195a15}} 
+\index{stdafx.\+h@{stdafx.\+h}!rtv\+Descriptor\+Size@{rtv\+Descriptor\+Size}}
+\index{rtv\+Descriptor\+Size@{rtv\+Descriptor\+Size}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{rtv\+Descriptor\+Size}{rtvDescriptorSize}}
+{\footnotesize\ttfamily int rtv\+Descriptor\+Size}
+
+\mbox{\Hypertarget{stdafx_8h_ae2e97f1ebd7c956e2c68d1209eabd4b1}\label{stdafx_8h_ae2e97f1ebd7c956e2c68d1209eabd4b1}} 
+\index{stdafx.\+h@{stdafx.\+h}!Running@{Running}}
+\index{Running@{Running}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Running}{Running}}
+{\footnotesize\ttfamily bool Running = true}
+
+\mbox{\Hypertarget{stdafx_8h_a1edb43294b3f4f7bb9bdd1d89ef9f8a8}\label{stdafx_8h_a1edb43294b3f4f7bb9bdd1d89ef9f8a8}} 
+\index{stdafx.\+h@{stdafx.\+h}!scissor\+Rect@{scissor\+Rect}}
+\index{scissor\+Rect@{scissor\+Rect}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{scissor\+Rect}{scissorRect}}
+{\footnotesize\ttfamily D3\+D12\+\_\+\+R\+E\+CT scissor\+Rect}
+
+\mbox{\Hypertarget{stdafx_8h_ac9b6b9e6c6f31f357fe9b5ca4a68be13}\label{stdafx_8h_ac9b6b9e6c6f31f357fe9b5ca4a68be13}} 
+\index{stdafx.\+h@{stdafx.\+h}!swap\+Chain@{swap\+Chain}}
+\index{swap\+Chain@{swap\+Chain}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{swap\+Chain}{swapChain}}
+{\footnotesize\ttfamily I\+D\+X\+G\+I\+Swap\+Chain3$\ast$ swap\+Chain}
+
+\mbox{\Hypertarget{stdafx_8h_a077160028db6d0028287e24721d5c8b0}\label{stdafx_8h_a077160028db6d0028287e24721d5c8b0}} 
+\index{stdafx.\+h@{stdafx.\+h}!vertex\+Buffer@{vertex\+Buffer}}
+\index{vertex\+Buffer@{vertex\+Buffer}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{vertex\+Buffer}{vertexBuffer}}
+{\footnotesize\ttfamily I\+D3\+D12\+Resource$\ast$ vertex\+Buffer}
+
+\mbox{\Hypertarget{stdafx_8h_af09e8f8bf3fd811d3b64c1f0255a95fb}\label{stdafx_8h_af09e8f8bf3fd811d3b64c1f0255a95fb}} 
+\index{stdafx.\+h@{stdafx.\+h}!vertex\+Buffer\+View@{vertex\+Buffer\+View}}
+\index{vertex\+Buffer\+View@{vertex\+Buffer\+View}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{vertex\+Buffer\+View}{vertexBufferView}}
+{\footnotesize\ttfamily D3\+D12\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+V\+I\+EW vertex\+Buffer\+View}
+
+\mbox{\Hypertarget{stdafx_8h_af43513025951d1c37cb1bb363f2809e4}\label{stdafx_8h_af43513025951d1c37cb1bb363f2809e4}} 
+\index{stdafx.\+h@{stdafx.\+h}!viewport@{viewport}}
+\index{viewport@{viewport}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{viewport}{viewport}}
+{\footnotesize\ttfamily D3\+D12\+\_\+\+V\+I\+E\+W\+P\+O\+RT viewport}
+
+\mbox{\Hypertarget{stdafx_8h_abbe7749c3b402f7dfe64f936774cfcd4}\label{stdafx_8h_abbe7749c3b402f7dfe64f936774cfcd4}} 
+\index{stdafx.\+h@{stdafx.\+h}!Width@{Width}}
+\index{Width@{Width}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily int Width = 800}
+
+\mbox{\Hypertarget{stdafx_8h_a758be6161c61a39d955719387e6f5b25}\label{stdafx_8h_a758be6161c61a39d955719387e6f5b25}} 
+\index{stdafx.\+h@{stdafx.\+h}!Window\+Title@{Window\+Title}}
+\index{Window\+Title@{Window\+Title}!stdafx.\+h@{stdafx.\+h}}
+\subsubsection{\texorpdfstring{Window\+Title}{WindowTitle}}
+{\footnotesize\ttfamily const char$\ast$ Window\+Title = \char`\"{}Direct\+X12\char`\"{}}
+

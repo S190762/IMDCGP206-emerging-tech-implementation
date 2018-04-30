@@ -1,0 +1,146 @@
+\hypertarget{vulkan__application_8h}{}\section{Vulkan/vulkan\+\_\+application.h File Reference}
+\label{vulkan__application_8h}\index{Vulkan/vulkan\+\_\+application.\+h@{Vulkan/vulkan\+\_\+application.\+h}}
+{\ttfamily \#include $<$vulkan/vulkan.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$glm/glm.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/gtc/matrix\+\_\+transform.\+hpp$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqueue__family__indices}{queue\+\_\+family\+\_\+indices}}
+\begin{DoxyCompactList}\small\item\em A structure that holds the graphics family index and present family index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structswap__chain__support__details}{swap\+\_\+chain\+\_\+support\+\_\+details}}
+\begin{DoxyCompactList}\small\item\em Hold the surface capabilities, surface formats and present modes. Used to determine if a swap chain is supported. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structvertex}{vertex}}
+\begin{DoxyCompactList}\small\item\em A structure that defines the layout of a Vertex and it\textquotesingle{}s associated data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structuniform__buffer__object}{uniform\+\_\+buffer\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em A structure to hold the data to be sent to the shader. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classvulkan__application}{vulkan\+\_\+application}}
+\begin{DoxyCompactList}\small\item\em The main application class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vulkan__application_8h_aea22151c1df842d43772ec5f931d2600}{V\+K\+\_\+\+U\+S\+E\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+W\+I\+N32\+\_\+\+K\+HR}}
+\item 
+\#define \mbox{\hyperlink{vulkan__application_8h_a816ab7d5c2ce1f0a01216042837beb93}{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{vulkan__application_8h_a2474a5474cbff19523a51eb1de01cda4}{width}} = 800
+\begin{DoxyCompactList}\small\item\em Define the height and width of the window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{vulkan__application_8h_ad12fc34ce789bce6c8a05d8a17138534}{height}} = 600
+\item 
+const std\+::vector$<$ const char $\ast$ $>$ \mbox{\hyperlink{vulkan__application_8h_a771e874c1bf4c4f17e67a8140cc61a3c}{validation\+\_\+layers}}
+\begin{DoxyCompactList}\small\item\em Define which validation layers to load. \end{DoxyCompactList}\item 
+const std\+::vector$<$ const char $\ast$ $>$ \mbox{\hyperlink{vulkan__application_8h_a14a23f7f7078ebe1de51fbd43b081dc3}{device\+\_\+extensions}}
+\begin{DoxyCompactList}\small\item\em Define the device extensions to load. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structvertex}{vertex}} $>$ \mbox{\hyperlink{vulkan__application_8h_a8310f8025728b8a10eb5b73dbc4af298}{vertices}}
+\begin{DoxyCompactList}\small\item\em The vertices to upload to the G\+PU, the format is \{X, Y\}\{R, G, B\}. \end{DoxyCompactList}\item 
+const std\+::vector$<$ uint16\+\_\+t $>$ \mbox{\hyperlink{vulkan__application_8h_ab8cd26df9e4cab1914e85a0085ff80f2}{indices}}
+\begin{DoxyCompactList}\small\item\em The indices to upload to the G\+PU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vulkan__application_8h_a816ab7d5c2ce1f0a01216042837beb93}\label{vulkan__application_8h_a816ab7d5c2ce1f0a01216042837beb93}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS@{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}}
+\index{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS@{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}{GLM\_FORCE\_RADIANS}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+NS}
+
+\mbox{\Hypertarget{vulkan__application_8h_aea22151c1df842d43772ec5f931d2600}\label{vulkan__application_8h_aea22151c1df842d43772ec5f931d2600}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!V\+K\+\_\+\+U\+S\+E\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+W\+I\+N32\+\_\+\+K\+HR@{V\+K\+\_\+\+U\+S\+E\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+W\+I\+N32\+\_\+\+K\+HR}}
+\index{V\+K\+\_\+\+U\+S\+E\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+W\+I\+N32\+\_\+\+K\+HR@{V\+K\+\_\+\+U\+S\+E\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+W\+I\+N32\+\_\+\+K\+HR}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{V\+K\+\_\+\+U\+S\+E\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+W\+I\+N32\+\_\+\+K\+HR}{VK\_USE\_PLATFORM\_WIN32\_KHR}}
+{\footnotesize\ttfamily \#define V\+K\+\_\+\+U\+S\+E\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+W\+I\+N32\+\_\+\+K\+HR}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{vulkan__application_8h_a14a23f7f7078ebe1de51fbd43b081dc3}\label{vulkan__application_8h_a14a23f7f7078ebe1de51fbd43b081dc3}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!device\+\_\+extensions@{device\+\_\+extensions}}
+\index{device\+\_\+extensions@{device\+\_\+extensions}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{device\+\_\+extensions}{device\_extensions}}
+{\footnotesize\ttfamily const std\+::vector$<$const char$\ast$$>$ device\+\_\+extensions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    VK\_KHR\_SWAPCHAIN\_EXTENSION\_NAME 
+\}
+\end{DoxyCode}
+
+
+Define the device extensions to load. 
+
+\mbox{\Hypertarget{vulkan__application_8h_ad12fc34ce789bce6c8a05d8a17138534}\label{vulkan__application_8h_ad12fc34ce789bce6c8a05d8a17138534}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!height@{height}}
+\index{height@{height}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int height = 600}
+
+\mbox{\Hypertarget{vulkan__application_8h_ab8cd26df9e4cab1914e85a0085ff80f2}\label{vulkan__application_8h_ab8cd26df9e4cab1914e85a0085ff80f2}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!indices@{indices}}
+\index{indices@{indices}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{indices}{indices}}
+{\footnotesize\ttfamily const std\+::vector$<$uint16\+\_\+t$>$ indices}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    0, 1, 2, 2, 3, 0
+\}
+\end{DoxyCode}
+
+
+The indices to upload to the G\+PU. 
+
+\mbox{\Hypertarget{vulkan__application_8h_a771e874c1bf4c4f17e67a8140cc61a3c}\label{vulkan__application_8h_a771e874c1bf4c4f17e67a8140cc61a3c}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!validation\+\_\+layers@{validation\+\_\+layers}}
+\index{validation\+\_\+layers@{validation\+\_\+layers}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{validation\+\_\+layers}{validation\_layers}}
+{\footnotesize\ttfamily const std\+::vector$<$const char$\ast$$>$ validation\+\_\+layers}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \textcolor{stringliteral}{"VK\_LAYER\_LUNARG\_standard\_validation"} 
+\}
+\end{DoxyCode}
+
+
+Define which validation layers to load. 
+
+\mbox{\Hypertarget{vulkan__application_8h_a8310f8025728b8a10eb5b73dbc4af298}\label{vulkan__application_8h_a8310f8025728b8a10eb5b73dbc4af298}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!vertices@{vertices}}
+\index{vertices@{vertices}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{structvertex}{vertex}}$>$ vertices}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{\{-0.5F, -0.5F\},\{1.0F, 0.0F, 0.0F\}\},
+    \{\{0.5F, -0.5F\},\{0.0F, 1.0F, 0.0F\}\},
+    \{\{0.5F, 0.5F\},\{0.0F, 0.0F, 1.0F\}\},
+    \{\{-0.5F, 0.5F\},\{1.0F, 1.0F, 1.0F\}\}
+\}
+\end{DoxyCode}
+
+
+The vertices to upload to the G\+PU, the format is \{X, Y\}\{R, G, B\}. 
+
+\mbox{\Hypertarget{vulkan__application_8h_a2474a5474cbff19523a51eb1de01cda4}\label{vulkan__application_8h_a2474a5474cbff19523a51eb1de01cda4}} 
+\index{vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}!width@{width}}
+\index{width@{width}!vulkan\+\_\+application.\+h@{vulkan\+\_\+application.\+h}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int width = 800}
+
+
+
+Define the height and width of the window. 
+

@@ -1,0 +1,77 @@
+\hypertarget{structvertex}{}\section{vertex Struct Reference}
+\label{structvertex}\index{vertex@{vertex}}
+
+
+A structure that defines the layout of a Vertex and it\textquotesingle{}s associated data.  
+
+
+
+
+{\ttfamily \#include $<$vulkan\+\_\+application.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Vk\+Vertex\+Input\+Binding\+Description \mbox{\hyperlink{structvertex_a82fe1d8d34f8c58ee60dde244401ca55}{get\+Binding\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Define the vertex input. \end{DoxyCompactList}\item 
+static std\+::array$<$ Vk\+Vertex\+Input\+Attribute\+Description, 2 $>$ \mbox{\hyperlink{structvertex_a0ee611b52cc36a4f5014a1fb6230cbc6}{get\+\_\+attribute\+\_\+descriptions}} ()
+\begin{DoxyCompactList}\small\item\em Obtain a description of the attributes for a vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec2 \mbox{\hyperlink{structvertex_ae79e06bf578bc411c75a3d35d91e020b}{pos}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{structvertex_a6b9a4d49465117369bc1eb347e6e65b2}{color}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A structure that defines the layout of a Vertex and it\textquotesingle{}s associated data. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structvertex_a0ee611b52cc36a4f5014a1fb6230cbc6}\label{structvertex_a0ee611b52cc36a4f5014a1fb6230cbc6}} 
+\index{vertex@{vertex}!get\+\_\+attribute\+\_\+descriptions@{get\+\_\+attribute\+\_\+descriptions}}
+\index{get\+\_\+attribute\+\_\+descriptions@{get\+\_\+attribute\+\_\+descriptions}!vertex@{vertex}}
+\subsubsection{\texorpdfstring{get\+\_\+attribute\+\_\+descriptions()}{get\_attribute\_descriptions()}}
+{\footnotesize\ttfamily static std\+::array$<$Vk\+Vertex\+Input\+Attribute\+Description, 2$>$ vertex\+::get\+\_\+attribute\+\_\+descriptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obtain a description of the attributes for a vertex. 
+
+\begin{DoxyReturn}{Returns}
+std array containing 2 attribute descriptions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structvertex_a82fe1d8d34f8c58ee60dde244401ca55}\label{structvertex_a82fe1d8d34f8c58ee60dde244401ca55}} 
+\index{vertex@{vertex}!get\+Binding\+Description@{get\+Binding\+Description}}
+\index{get\+Binding\+Description@{get\+Binding\+Description}!vertex@{vertex}}
+\subsubsection{\texorpdfstring{get\+Binding\+Description()}{getBindingDescription()}}
+{\footnotesize\ttfamily static Vk\+Vertex\+Input\+Binding\+Description vertex\+::get\+Binding\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Define the vertex input. 
+
+\begin{DoxyReturn}{Returns}
+A vulkan input binding description 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structvertex_a6b9a4d49465117369bc1eb347e6e65b2}\label{structvertex_a6b9a4d49465117369bc1eb347e6e65b2}} 
+\index{vertex@{vertex}!color@{color}}
+\index{color@{color}!vertex@{vertex}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily glm\+::vec3 vertex\+::color}
+
+\mbox{\Hypertarget{structvertex_ae79e06bf578bc411c75a3d35d91e020b}\label{structvertex_ae79e06bf578bc411c75a3d35d91e020b}} 
+\index{vertex@{vertex}!pos@{pos}}
+\index{pos@{pos}!vertex@{vertex}}
+\subsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily glm\+::vec2 vertex\+::pos}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Vulkan/\mbox{\hyperlink{vulkan__application_8h}{vulkan\+\_\+application.\+h}}\end{DoxyCompactItemize}
