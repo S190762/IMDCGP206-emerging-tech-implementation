@@ -1,4 +1,8 @@
-﻿  main.cpp
-c:\users\alix\documents\github\imdcgp206-emerging-tech\emergingtechnologies\dxd12\main.cpp(290): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
-c:\users\alix\documents\github\imdcgp206-emerging-tech\emergingtechnologies\dxd12\main.cpp(291): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+﻿  compilation object save succeeded; see C:\Users\Alix\Documents\GitHub\IMDCGP206-emerging-tech\EmergingTechnologies\x64\Debug\PixelShader.cso
+  compilation object save succeeded; see C:\Users\Alix\Documents\GitHub\IMDCGP206-emerging-tech\EmergingTechnologies\x64\Debug\VertexShader.cso
+  main.cpp
+  d3dx12_application.cpp
+c:\users\alix\documents\github\imdcgp206-emerging-tech\emergingtechnologies\dxd12\d3dx12_application.cpp(268): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+c:\users\alix\documents\github\imdcgp206-emerging-tech\emergingtechnologies\dxd12\d3dx12_application.cpp(269): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+  Generating Code...
   DXD12.vcxproj -> C:\Users\Alix\Documents\GitHub\IMDCGP206-emerging-tech\EmergingTechnologies\x64\Debug\DXD12.exe

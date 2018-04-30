@@ -7,8 +7,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXD12", "DXD12\DXD12.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vulkan", "Vulkan\Vulkan.vcxproj", "{ADC932BE-5FAF-4A67-9DED-E6A81F6531CE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GFXBenchmark", "GFXBenchmark\GFXBenchmark.vcxproj", "{526159E8-2C46-4637-9142-DD5C719B2BD8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,14 +31,6 @@ Global
 		{ADC932BE-5FAF-4A67-9DED-E6A81F6531CE}.Release|x64.Build.0 = Release|x64
 		{ADC932BE-5FAF-4A67-9DED-E6A81F6531CE}.Release|x86.ActiveCfg = Release|Win32
 		{ADC932BE-5FAF-4A67-9DED-E6A81F6531CE}.Release|x86.Build.0 = Release|Win32
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Debug|x64.ActiveCfg = Debug|x64
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Debug|x64.Build.0 = Debug|x64
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Debug|x86.ActiveCfg = Debug|Win32
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Debug|x86.Build.0 = Debug|Win32
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Release|x64.ActiveCfg = Release|x64
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Release|x64.Build.0 = Release|x64
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Release|x86.ActiveCfg = Release|Win32
-		{526159E8-2C46-4637-9142-DD5C719B2BD8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

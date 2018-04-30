@@ -142,8 +142,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="d3dx12.h" />
+    <ClInclude Include="d3dx12_application.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="d3dx12_application.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
